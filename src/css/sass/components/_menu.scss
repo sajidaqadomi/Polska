@@ -1,0 +1,19 @@
+#menu {
+    position: relative;
+
+    .multilevelpushmenu_wrapper {
+
+        .levelHolderClass {
+            background-color: rgba($subFColor, 1) !important;
+
+
+            li {
+                border-top: 1px solid rgba($mainBColor, .6) !important;
+
+                &:last-child {
+                    border-bottom: 1px solid rgba($mainBColor, .6) !important;
+                }
+            }
+        }
+    }
+}

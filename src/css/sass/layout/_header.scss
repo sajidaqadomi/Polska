@@ -1,0 +1,115 @@
+header {
+    &.sticky {
+        //background-color: $mainBColor !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .header-content {
+        background-color: $mainBColor !important;
+        // position: relative;
+        padding: 18px 0;
+
+        @media #{ $minLarge } {
+            padding: 25px 0;
+        }
+
+        .upper-header {
+            .logo-img {
+                text-align: center;
+            }
+
+            .icons-list {
+                display: flex !important;
+                justify-content: space-around;
+
+                @media #{ $minLarge } {
+                    justify-content: space-between;
+                }
+
+                .icons-item {
+                    text-align: center;
+                    color: $mainFColor;
+                    cursor: pointer;
+
+
+                    .icon-desc {
+                        font-size: 12px;
+                        line-height: 1.33;
+                        letter-spacing: 0.2px;
+                    }
+
+                    transition: all .3s ease-in-out;
+
+
+                    &:hover {
+                        color: $subFColor !important;
+
+                        .icon {
+                            color: $subFColor !important;
+                        }
+
+                    }
+
+                }
+
+                &:last-of-type {
+                    text-align: right;
+                }
+            }
+
+
+
+        }
+
+        .lower-header {
+            // &.sticky {
+            //     background-color: $mainBColor !important;
+            //     position: fixed;
+            //     top: 0;
+            //     width: 100%;
+            //     left: 0;
+            // }
+
+            .nav-item {
+                .nav-link {
+                    color: $mainFColor !important;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    //font-family: Eina03;
+                    font-size: 13px;
+                    font-weight: 600;
+                    line-height: 1.23;
+                    letter-spacing: 1.4px;
+                }
+
+            }
+
+        }
+
+        .search-area {
+
+            input {
+                background-color: transparent !important;
+                border: none;
+                width: 90% !important;
+            }
+
+            &::before {
+                content: url(../../../imgs/search.svg);
+                background-repeat: no-repeat;
+                display: inline-block;
+
+            }
+
+            border-bottom: 1px solid gray;
+        }
+
+
+    }
+
+    @import '../components/menu';
+
+}
