@@ -1,0 +1,81 @@
+.footer {
+    background-color: rgba($mainBColor, 1);
+    padding: 2em 0;
+
+    .footer-links {
+        justify-content: space-between;
+
+        .list {
+            .list-item {
+                a {
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: $subFColor !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerContact {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .tel-number {
+            a {
+                color: $subFColor !important;
+            }
+        }
+
+        .social-contact {
+            // justify-self: end;
+
+            .social-title {
+                color: $mainFColor;
+                margin-bottom: 1em;
+                font-weight: bold;
+                font-size: 13px;
+
+
+
+            }
+
+            .social-list {
+
+                //margin-bottom: 0;
+                @media #{$minLarge} {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .privacy-content {
+        text-align: center;
+        width: 100%;
+        @extend %smallfont;
+
+        m .privacy-sepratator {
+            padding: 0 10px !important;
+
+
+        }
+
+    }
+
+    .copyright {
+        @extend %smallfont;
+
+
+    }
+}
+
+%smallfont {
+    font-size: 12px !important;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: $mainFColor;
+}
