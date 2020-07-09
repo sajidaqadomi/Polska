@@ -73,17 +73,39 @@ header {
             //     left: 0;
             // }
 
-            .nav-item {
-                .nav-link {
-                    color: $mainFColor !important;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    //font-family: Eina03;
-                    font-size: 13px;
-                    font-weight: 600;
-                    line-height: 1.23;
-                    letter-spacing: 1.4px;
+            .navbar {
+                padding-left: 0 !important;
+
+                .nav-item {
+                    padding: 10px 15px !important;
+
+                    &:first-of-type {
+                        padding-left: 0 !important;
+                    }
+
+                    .nav-link {
+                        color: $mainFColor !important;
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        //font-family: Eina03;
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 1.23;
+                        letter-spacing: 1.4px;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            background-color: rgba($subFColor, 1) !important
+                        }
+                    }
+
+                    &.active {
+                        .nav-link {
+                            background-color: rgba($subFColor, 1) !important;
+                        }
+                    }
                 }
+
 
             }
 

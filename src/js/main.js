@@ -1,19 +1,27 @@
 $(function () {
-    let header = $('header');
-    let headerContent = $('.header .header-content')
-    let lowHead = $('.lower-header');
-    let upperHead = $('.upper-header');
-    let hamburgerIcon = $('.hamburger-icon');
-    let menu = $('#menu');
+    let header = $('header'),
+        headerContent = $('.header .header-content'),
+        lowHead = $('.lower-header'),
+        upperHead = $('.upper-header'),
+        hamburgerIcon = $('.hamburger-icon'),
+        navLink = $('.lower-header .nav-item .nav-link'),
+        menu = $('#menu');
     ///**********Dimentions********/
     let headerHeigh = headerContent.innerHeight();
     let lowHeadHeigh = lowHead.innerHeight();
     let upperHeadHeigh = upperHead.innerHeight();
     let menuWidth = menu.innerWidth();
     //************header**********/
-    function toggleStickyclass() {
-        lowHead.toogleClass('sticky');
-    }
+    // function toggleStickyclass() {
+    //     lowHead.toogleClass('sticky');
+    // }
+    ///***********nav*********/
+    navLink.on('click', function () {
+        $(this).parent().addClass('active').siblings().removeClass('active');
+
+    })
+
+
 
     //***********menu********/
     menu.css("left", -menuWidth);
