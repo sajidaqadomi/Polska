@@ -4,7 +4,7 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 button {
@@ -14,4 +14,12 @@ button {
 img {
 
     max-width: 100%;
+}
+
+input {
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
 }

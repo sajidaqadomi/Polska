@@ -65,19 +65,12 @@ header {
         }
 
         .lower-header {
-            // &.sticky {
-            //     background-color: $mainBColor !important;
-            //     position: fixed;
-            //     top: 0;
-            //     width: 100%;
-            //     left: 0;
-            // }
-
             .navbar {
                 padding-left: 0 !important;
+                padding-right: 0 !important;
 
                 .nav-item {
-                    padding: 10px 15px !important;
+                    border: 2px solid rgba($mainBColor, .8);
 
                     &:first-of-type {
                         padding-left: 0 !important;
@@ -91,8 +84,10 @@ header {
                         font-size: 13px;
                         font-weight: 600;
                         line-height: 1.23;
-                        letter-spacing: 1.4px;
+                        letter-spacing: 1.2px;
                         transition: all .3s ease-in-out;
+                        display: block;
+                        padding: 15px 10px;
 
                         &:hover {
                             background-color: rgba($subFColor, 1) !important
@@ -117,6 +112,8 @@ header {
                 background-color: transparent !important;
                 border: none;
                 width: 90% !important;
+                color: $subFColor;
+
             }
 
             &::before {
@@ -127,6 +124,15 @@ header {
             }
 
             border-bottom: 1px solid gray;
+        }
+
+        .input-effect {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $subFColor;
         }
 
 

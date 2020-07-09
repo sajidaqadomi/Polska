@@ -5,6 +5,8 @@ $(function () {
         upperHead = $('.upper-header'),
         hamburgerIcon = $('.hamburger-icon'),
         navLink = $('.lower-header .nav-item .nav-link'),
+        searchInput = $('.search-area .search'),
+        menuLink = $('#menu .nav-list a'),
         menu = $('#menu');
     ///**********Dimentions********/
     let headerHeigh = headerContent.innerHeight();
@@ -19,7 +21,30 @@ $(function () {
     navLink.on('click', function () {
         $(this).parent().addClass('active').siblings().removeClass('active');
 
+    });
+    console.log(menuLink);
+
+    menuLink.on('click', function () {
+        //  console.log('click');
+        $(this).parent().addClass('active').siblings().removeClass('active');
+
     })
+    /**************search*****/
+    searchInput.focus(function () {
+        console.log('focus');
+        let inputEffect = $(this).parent('.search-area').find('.input-effect');
+        inputEffect.animate({
+            'width': '100%'
+        }, 200)
+    });
+    searchInput.blur(function () {
+        console.log('focus');
+        let inputEffect = $(this).parent('.search-area').find('.input-effect');
+        inputEffect.animate({
+            'width': '0%'
+        }, 200)
+    });
+
 
 
 
@@ -62,6 +87,8 @@ $(function () {
 
 
     }
+    ///*****active item minue */
+    ///////////////////////////////
     hamburgerIcon.on('click', function () {
         $(this).find('.icon').toggleClass('fa-arrow-left  fa-bars');
         menu.toggleClass('show')

@@ -3,13 +3,17 @@ ul {
   padding: 0 !important; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none !important; }
 
 button {
   outline: none; }
 
 img {
   max-width: 100%; }
+
+input:focus {
+  border: none;
+  outline: none; }
 
 .hamburger-icon {
   padding: .5em;
@@ -67,9 +71,10 @@ header .header-content {
     header .header-content .upper-header .icons-list:last-of-type {
       text-align: right; }
   header .header-content .lower-header .navbar {
-    padding-left: 0 !important; }
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
     header .header-content .lower-header .navbar .nav-item {
-      padding: 10px 15px !important; }
+      border: 2px solid rgba(0, 0, 0, 0.8); }
       header .header-content .lower-header .navbar .nav-item:first-of-type {
         padding-left: 0 !important; }
       header .header-content .lower-header .navbar .nav-item .nav-link {
@@ -79,9 +84,11 @@ header .header-content {
         font-size: 13px;
         font-weight: 600;
         line-height: 1.23;
-        letter-spacing: 1.4px;
+        letter-spacing: 1.2px;
         -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out; }
+        transition: all .3s ease-in-out;
+        display: block;
+        padding: 15px 10px; }
         header .header-content .lower-header .navbar .nav-item .nav-link:hover {
           background-color: #edb15d !important; }
       header .header-content .lower-header .navbar .nav-item.active .nav-link {
@@ -91,20 +98,34 @@ header .header-content {
     header .header-content .search-area input {
       background-color: transparent !important;
       border: none;
-      width: 90% !important; }
+      width: 90% !important;
+      color: #edb15d; }
     header .header-content .search-area::before {
       content: url(../../../imgs/search.svg);
       background-repeat: no-repeat;
       display: inline-block; }
+  header .header-content .input-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #edb15d; }
 
 header #menu {
   position: relative; }
   header #menu .multilevelpushmenu_wrapper .levelHolderClass {
-    background-color: #edb15d !important; }
+    background-color: rgba(237, 177, 93, 0.8) !important; }
     header #menu .multilevelpushmenu_wrapper .levelHolderClass li {
-      border-top: 1px solid rgba(0, 0, 0, 0.6) !important; }
+      border-top: 1px solid rgba(0, 0, 0, 0.6) !important;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
       header #menu .multilevelpushmenu_wrapper .levelHolderClass li:last-child {
         border-bottom: 1px solid rgba(0, 0, 0, 0.6) !important; }
+      header #menu .multilevelpushmenu_wrapper .levelHolderClass li.active {
+        background-color: #edb15d !important; }
+      header #menu .multilevelpushmenu_wrapper .levelHolderClass li:hover {
+        background-color: #edb15d !important; }
 
 body {
   height: 1000px; }

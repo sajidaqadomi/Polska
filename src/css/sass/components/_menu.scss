@@ -4,14 +4,24 @@
     .multilevelpushmenu_wrapper {
 
         .levelHolderClass {
-            background-color: rgba($subFColor, 1) !important;
+            background-color: rgba($subFColor, .8) !important;
 
 
             li {
                 border-top: 1px solid rgba($mainBColor, .6) !important;
+                // background-color: rgba($subFColor, .8) !important;
+                transition: all .3s ease-in-out;
 
                 &:last-child {
                     border-bottom: 1px solid rgba($mainBColor, .6) !important;
+                }
+
+                &.active {
+                    background-color: rgba($subFColor, 1) !important;
+                }
+
+                &:hover {
+                    background-color: rgba($subFColor, 1) !important;
                 }
             }
         }
