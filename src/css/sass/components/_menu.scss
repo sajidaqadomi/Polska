@@ -1,5 +1,6 @@
 #menu {
-    position: relative;
+    position: fixed;
+    width: 100% !important;
     z-index: 9999;
 
     .multilevelpushmenu_wrapper {

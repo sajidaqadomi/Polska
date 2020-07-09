@@ -9,27 +9,24 @@ $(function () {
         menuLink = $('#menu .nav-list a'),
         menu = $('#menu');
     ///**********Dimentions********/
-    let headerHeigh = headerContent.innerHeight();
-    let lowHeadHeigh = lowHead.innerHeight();
-    let upperHeadHeigh = upperHead.innerHeight();
-    let menuWidth = menu.innerWidth();
+    let headerHeigh = headerContent.innerHeight(),
+        lowHeadHeigh = lowHead.innerHeight(),
+        upperHeadHeigh = upperHead.innerHeight(),
+        menuWidth = menu.innerWidth();
     //************header**********/
-    // function toggleStickyclass() {
-    //     lowHead.toogleClass('sticky');
-    // }
-    ///***********nav*********/
+
+    ///***********nav-minue-active*********/
     navLink.on('click', function () {
         $(this).parent().addClass('active').siblings().removeClass('active');
 
     });
-    console.log(menuLink);
 
     menuLink.on('click', function () {
         //  console.log('click');
         $(this).parent().addClass('active').siblings().removeClass('active');
 
     })
-    /**************search*****/
+    /**************search animate*****/
     searchInput.focus(function () {
         console.log('focus');
         let inputEffect = $(this).parent('.search-area').find('.input-effect');
@@ -45,49 +42,40 @@ $(function () {
         }, 200)
     });
 
-
-
-
     //***********menu********/
     menu.css("left", -menuWidth);
+    function initiaizeMenu() {
+        $('#menu').multilevelpushmenu(
+            {
+                container: $('#menu'),
+                fullCollapse: true,
+                collapsed: false,
+                mode: 'cover',
+                backText: 'Back',                                          // Text for 'Back' menu item.
+                backItemClass: 'backItemClass',                            // CSS class for back menu item.
+                backItemIcon: 'fa fa-angle-left',                         // FontAvesome icon used for back menu item.
+                groupIcon: '',
+
+            }
+        );
+
+    }
     function setTopMenu() {
         lowHead.hasClass('sticky') ? menu.css("margin-top", lowHeadHeigh) : menu.css("top", 0);
     }
 
-
-    function checkWindow() {
-
-        if (window.innerWidth <= 768) {
-
-
-            $('#menu').multilevelpushmenu(
-                {
-                    container: $('#menu'),
-                    fullCollapse: true,
-                    collapsed: false,
-                    mode: 'cover',
-                    backText: 'Back',                                          // Text for 'Back' menu item.
-                    backItemClass: 'backItemClass',                            // CSS class for back menu item.
-                    backItemIcon: 'fa fa-angle-left',                         // FontAvesome icon used for back menu item.
-                    groupIcon: '',
-
-                }
-            );
-
-
-        }
-
-    }
     function animateMinue() {
+        console.log(menuWidth);
+
         menu.animate({
             left: `${menu.hasClass("show") ? 0 : - menuWidth}`
         },
-            300
+            200
         )
 
 
     }
-    ///*****active item minue */
+
     ///////////////////////////////
     hamburgerIcon.on('click', function () {
         $(this).find('.icon').toggleClass('fa-arrow-left  fa-bars');
@@ -99,7 +87,7 @@ $(function () {
             hamburgerIcon.click();
         }
 
-        if ($(this).scrollTop() > headerHeigh) {
+        if ($(this).scrollTop() > 200) {
             if (header.not('.sticky')) {
                 header.addClass('sticky')
                 upperHead.addClass('d-none');
@@ -116,9 +104,27 @@ $(function () {
 
     })
 
+    ///*********checkWindow *************/
+    function checkWindow() {
+
+        if (window.innerWidth <= 768) {
+
+            //  menu.css("left", -menuWidth);
+            initiaizeMenu();
+            menuWidth = menu.innerWidth();
+            animateMinue();
+
+
+        }
+
+    }
+    ////*************************************** */
 
 
     checkWindow();
+    $(window).on('resize', function () {
+        checkWindow();
+    });
 
 
 })
