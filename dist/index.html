@@ -19,10 +19,10 @@
             <div
               class="row justify-content-around justify-content-lg-between align-items-center no-gutters"
             >
-              <div class="col-6 col-md-4 col-lg-3">
+              <div class="col-6 col-md-2 col-lg-2">
                 <ul class="icons-list">
                   <li class="icons-item">
-                    <a href="#" class="icon-list">
+                    <a href="#" class="icon-link">
                       <img
                         src="imgs/makeup-artists.svg"
                         alt="makeup-artists" /></a
@@ -30,8 +30,9 @@
                       >Makeup Artists
                     </span>
                   </li>
+
                   <li class="icons-item">
-                    <a href="#" class="icon-list"
+                    <a href="tel:123-456-7890" class="icon-link"
                       ><img src="imgs/phone.svg" alt="Phone" /></a
                     ><br /><span class="icon-desc d-none d-lg-block"
                       >Call Us
@@ -39,20 +40,20 @@
                   </li>
                 </ul>
               </div>
-              <div class="d-none d-lg-block col-lg-6">
+              <div class="d-none d-md-block col-md-8">
                 <p class="logo-img"><img src="imgs/logo.svg" alt="logo" /></p>
               </div>
-              <div class="col-6 col-md-4 col-lg-3">
+              <div class="col-6 col-md-2 col-lg-2">
                 <ul class="icons-list">
-                  <li class="icons-item">
-                    <a href="#" class="icon-list"
+                  <li class="icons-item cart" data-cart="5">
+                    <a href="#" class="icon-link"
                       ><img src="imgs/cart.svg" alt="makeup-artists" /></a
                     ><br /><span class="icon-desc d-none d-lg-block"
-                      >Makeup Artists
+                      >cart
                     </span>
                   </li>
                   <li class="icons-item">
-                    <a href="#" class="icon-list"
+                    <a href="#" class="icon-link"
                       ><img src="imgs/account.svg" alt="acount" /></a
                     ><br /><span class="icon-desc d-none d-lg-block"
                       >hi sara</span
@@ -68,12 +69,12 @@
             <div
               class="row justify-content-between align-items-center no-gutters"
             >
-              <div class="col-2 col-lg-10">
+              <div class="col-2 col-md-10">
                 <nav
-                  class="navbar navbar-expand-lg navbar-light d-none d-lg-flex"
+                  class="navbar navbar-expand-md navbar-light d-none d-md-flex"
                 >
                   <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto d-none d-lg-flex">
+                    <ul class="navbar-nav mr-auto d-none d-md-flex">
                       <li class="nav-item active">
                         <a class="nav-link" href="#">Products</a>
                       </li>
@@ -96,38 +97,54 @@
                   </div>
                 </nav>
                 <button
-                  class="navbar-toggler d-flex d-lg-none hamburger-icon align-items-center justify-content-center"
+                  class="navbar-toggler d-flex d-md-none hamburger-icon align-items-center justify-content-center"
                   type="button"
                   data-target="#minue"
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <i class="fa fa-bars icon fa-2x"></i>
+                  <i class="fa fa-bars icon fa-1x"></i>
                 </button>
               </div>
-              <div class="col-8 d-inline-block d-lg-none">
+              <div class="col-8 d-inline-block d-md-none">
                 <p class="logo-img"><img src="imgs/logo.svg" alt="logo" /></p>
               </div>
 
-              <div class="col-2 col-lg-2">
-                <div class="search-area d-none d-lg-flex">
-                  <input
-                    class="search"
-                    type="text"
-                    name="search"
-                    id="search"
-                    placeholder="Search ..."
-                  />
-                  <div class="input-effect"></div>
+              <div class="col-2 col-md-2">
+                <div class="search-form d-none d-md-flex">
+                  <p class="search-icon m-0">
+                    <img src="imgs/search.svg" alt="search" />
+                  </p>
+                  <input type="text" class="" placeholder="Search" />
+                  <div class="line"></div>
                 </div>
-                <a href="#" class="d-flex d-lg-none">
-                  <img src="./imgs/search.svg" alt="" class="d-block ml-auto" />
+                <a
+                  href="#search-area"
+                  class="d-flex d-md-none"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="search-area"
+                >
+                  <img
+                    src="./imgs/search.svg"
+                    alt="search"
+                    class="d-block ml-auto"
+                  />
                 </a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="md-form active-cyan-2 m-0 collapse" id="search-area">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
       </div>
       <div id="menu" class="d-flex d-lg-none">
         <nav>

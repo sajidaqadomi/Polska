@@ -26,21 +26,8 @@ $(function () {
         $(this).parent().addClass('active').siblings().removeClass('active');
 
     })
-    /**************search animate*****/
-    searchInput.focus(function () {
-        console.log('focus');
-        let inputEffect = $(this).parent('.search-area').find('.input-effect');
-        inputEffect.animate({
-            'width': '100%'
-        }, 200)
-    });
-    searchInput.blur(function () {
-        console.log('focus');
-        let inputEffect = $(this).parent('.search-area').find('.input-effect');
-        inputEffect.animate({
-            'width': '0%'
-        }, 200)
-    });
+
+
 
     //***********menu********/
     menu.css("left", -menuWidth);

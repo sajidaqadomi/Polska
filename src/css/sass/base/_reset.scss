@@ -8,6 +8,8 @@ a {
     text-decoration: none !important;
     color: $mainFColor !important;
     cursor: pointer;
+    text-transform: uppercase !important;
+    transition: all .3s ease-in-out;
 }
 
 button {
@@ -20,6 +22,9 @@ img {
 }
 
 input {
+    outline-offset: 0;
+    padding: 10px 10px;
+
     &:focus {
         border: none;
         outline: none;
