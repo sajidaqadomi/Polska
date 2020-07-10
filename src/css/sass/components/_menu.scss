@@ -7,6 +7,7 @@
 
         .levelHolderClass {
             background-color: rgba($subFColor, 1) !important;
+            width: 100% !important;
 
 
             li {
@@ -22,9 +23,9 @@
                 //     background-color: rgba($subFColor, 1) !important;
                 // }
 
-                // &:hover {
-                //     background-color: rgba($subFColor, 1) !important;
-                // }
+                &:hover {
+                    background-color: rgba($subFColor, .9) !important;
+                }
             }
         }
     }

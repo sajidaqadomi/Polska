@@ -40,38 +40,46 @@ header {
                     color: $mainFColor;
                     cursor: pointer;
                     position: relative;
+                    transition: all .3s ease-in-out;
 
-                    &:before {
-                        content: attr(data-cart);
-                        position: absolute;
-                        top: -40%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 8px;
-                        height: 20px;
-                        font-size: 13px;
-                        font-weight: 600;
-                        line-height: 1.54;
-                        color: $subFColor;
+                    &:not(.cart) {
+                        &:hover {
+                            color: $subFColor !important;
+
+                            .icon {
+                                color: $subFColor !important;
+                            }
+
+                        }
 
                     }
 
+
+
+                    &.cart {
+                        cursor: default;
+
+                        &:before {
+                            content: attr(data-cart);
+                            position: absolute;
+                            top: -40%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 8px;
+                            height: 20px;
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 1.54;
+                            color: $subFColor;
+
+                        }
+
+                    }
 
                     .icon-desc {
                         @extend %smallfontstyle;
                     }
 
-                    transition: all .3s ease-in-out;
-
-
-                    &:hover {
-                        color: $subFColor !important;
-
-                        .icon {
-                            color: $subFColor !important;
-                        }
-
-                    }
 
                 }
 

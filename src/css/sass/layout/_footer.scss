@@ -26,7 +26,12 @@
 
         .tel-number {
             a {
-                color: $subFColor !important;
+                color: rgba($subFColor, .8) !important;
+
+                &:hover {
+                    color: rgba($subFColor, 1) !important;
+
+                }
             }
         }
 
@@ -58,7 +63,13 @@
         width: 100%;
         @extend %smallfont;
 
-        m .privacy-sepratator {
+        a {
+            &:hover {
+                color: rgba($subFColor, 1) !important;
+            }
+        }
+
+        .privacy-sepratator {
             padding: 0 10px !important;
 
 
