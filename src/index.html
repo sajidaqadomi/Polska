@@ -69,7 +69,7 @@
             <div
               class="row justify-content-between align-items-center no-gutters"
             >
-              <div class="col-2 col-md-10">
+              <div class="col-4 col-md-10">
                 <nav
                   class="navbar navbar-expand-md navbar-light d-none d-md-flex"
                 >
@@ -107,44 +107,48 @@
                   <i class="fa fa-bars icon fa-1x"></i>
                 </button>
               </div>
-              <div class="col-8 d-inline-block d-md-none">
+              <div class="col-4 d-inline-block d-md-none">
                 <p class="logo-img"><img src="imgs/logo.svg" alt="logo" /></p>
               </div>
 
-              <div class="col-2 col-md-2">
-                <div class="search-form d-none d-md-flex">
+              <div class="col-4 col-md-2">
+                <form class="search-form d-none d-md-flex">
                   <p class="search-icon m-0">
                     <img src="imgs/search.svg" alt="search" />
                   </p>
                   <input type="text" class="" placeholder="Search" />
                   <div class="line"></div>
+                </form>
+
+                <div class="search-icon d-flex d-md-none justify-content-end">
+                  <a
+                    href="#search-area"
+                    class="link-search"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="search-area"
+                  >
+                    <img
+                      src="imgs/search.svg"
+                      alt="search"
+                      class="d-block ml-auto"
+                    />
+                  </a>
                 </div>
-                <a
-                  href="#search-area"
-                  class="d-flex d-md-none"
-                  data-toggle="collapse"
-                  aria-expanded="false"
-                  aria-controls="search-area"
-                >
-                  <img
-                    src="./imgs/search.svg"
-                    alt="search"
-                    class="d-block ml-auto"
-                  />
-                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="md-form active-cyan-2 m-0 collapse" id="search-area">
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Search"
-          aria-label="Search"
-        />
+      <div class="form-wrapper d-md-none collapse" id="search-area">
+        <form class="search-form mobile m-0">
+          <p class="search-icon m-0">
+            <img src="imgs/search.svg" alt="search" />
+          </p>
+          <input type="text" class="" placeholder="Search" />
+          <!-- <div class="line"></div> -->
+        </form>
       </div>
       <div id="menu" class="d-flex d-lg-none">
         <nav>
