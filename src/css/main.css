@@ -408,7 +408,7 @@ header {
   line-height: 1.5; }
 
 .product-details {
-  background-image: url("../../../imgs/product-details-bg.jpg");
+  background-image: url(".././../imgs/product-details-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -417,12 +417,10 @@ header {
     .product-details {
       text-align: left; } }
   .product-details .name {
-    text-align: center;
     font-size: 22px;
     font-weight: 600; }
   .product-details .desc {
-    line-height: 1.75;
-    text-align: center; }
+    line-height: 1.75; }
 
 .footer {
   background-color: black;
