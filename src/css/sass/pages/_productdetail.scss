@@ -20,6 +20,14 @@
 
     .desc {
         line-height: 1.75;
+        width: 100%;
+
+
+        @media #{$minMed} {
+            text-align: left;
+
+            width: 80%;
+        }
 
     }
 

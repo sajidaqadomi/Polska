@@ -420,7 +420,12 @@ header {
     font-size: 22px;
     font-weight: 600; }
   .product-details .desc {
-    line-height: 1.75; }
+    line-height: 1.75;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .product-details .desc {
+        text-align: left;
+        width: 80%; } }
 
 .footer {
   background-color: black;
