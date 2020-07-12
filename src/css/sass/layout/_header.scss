@@ -2,12 +2,12 @@ header {
     z-index: 999;
 
     &.sticky {
-        //background-color: $mainBColor !important;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        left: 0;
-    }
+       //background-color: $mainBColor !important;
+       position: fixed;
+       top: 0;
+       width: 100%;
+       left: 0;
+   }
 
     .header-content {
         background-color: $mainBColor !important;

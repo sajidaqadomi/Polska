@@ -5,21 +5,22 @@ $(function () {
         upperHead = $('.upper-header'),
         hamburgerIcon = $('.hamburger-icon'),
         navLink = $('.lower-header .nav-item .nav-link'),
-        searchIcon = $('.link-search')
-    menuLink = $('#menu .nav-list a'),
+        searchIcon = $('.link-search'),
+        menuLink = $('#menu .nav-list a'),
         menu = $('#menu'),
         outLContainer = $('.out-lcontainer'),
-        //////////////
         homeProducts = $('.home-products-li'),
-        productSelect = $('.product-select');
+        productSelect = $('.product-select'),
 
-    ///**********Dimentions********/
-    let headerHeigh, lowHeadHeigh, upperHeadHeigh, menuWidth;
+        ///**********Dimentions********/
+        headerHeigh, lowHeadHeigh, upperHeadHeigh, menuWidth, leftOffset;
 
     function calcDimetions() {
         headerHeigh = headerContent.innerHeight();
         lowHeadHeigh = lowHead.innerHeight();
         upperHeadHeigh = upperHead.innerHeight();
+        menuWidth = menu.innerWidth();//
+        leftOffset = outLContainer.offset().left;//for verical slider
         menuWidth = menu.innerWidth();
 
 
@@ -46,7 +47,7 @@ $(function () {
 
 
     //***********menu********/
-    menu.css("left", -menuWidth);
+
     function initiaizeMenu() {
         $('#menu').multilevelpushmenu(
             {
@@ -64,8 +65,9 @@ $(function () {
 
     }
     function setTopValue() {
-        header.hasClass('sticky') ? $('body').css("padding-top", headerHeigh + 100) : $('body').css("padding-top", 0);
-        menu.css("top", headerHeigh)
+        calcDimetions();
+        // header.hasClass('sticky') ? $('body').css("padding-top", headerHeigh + 100) : $('body').css("padding-top", 0);
+        menu.css("top", headerHeigh);
     }
 
     function animateMinue() {
@@ -88,59 +90,28 @@ $(function () {
         animateMinue();
         controlSearchicon($(this).find('.icon'));
     })
-    $(window).on('scroll', function () {
-        if (menu.hasClass('show')) {
-            hamburgerIcon.click();
-        }
 
-        if ($(this).scrollTop() > 100) {
-            if (header.not('.sticky')) {
-                header.addClass('sticky')
-                upperHead.addClass('d-none');
-                calcDimetions();///to handle minue top-remove h top
-                setTopValue();
-            }
-        } else {
-            if (header.hasClass('sticky')) {
-                header.removeClass('sticky');
-                upperHead.removeClass('d-none');
-                calcDimetions();
-                setTopValue();
-            }
-
-        }
-
-    })
 
     ///*********checkWindow *************/
     function checkWindow() {
-        let leftOffset = outLContainer.offset().left,//for verical slider
-            righttOffset = outLContainer.offset().reight;
+        calcDimetions();
+        let contPadding = +($('.container').css('padding-left').slice(0, -2));
+        let contMargin = ($('.container').offset().left);
+
 
         if (window.innerWidth < 768) {
 
-            //  menu.css("left", -menuWidth);
-            initiaizeMenu();
-            menuWidth = menu.innerWidth();
-            calcDimetions();
-            setTopValue();
+            menu.css("left", -menuWidth);
             animateMinue();
-
             outLContainer.css('margin-left', 0);
-            // outLContainer.css('margin-reight', +righttOffset);
-
-
 
         } else {
-            calcDimetions();
-            let leftOffset = outLContainer.offset().left,//for verical slider
-                righttOffset = outLContainer.offset().reight;
-            outLContainer.css('margin-left', -leftOffset);
-            // outLContainer.css('margin-reight', -leftOffset);
+            outLContainer.css('margin-left', - (contMargin + contPadding));
+
         }
 
     }
-    //************End Header******************************************************************************/
+
 
     //************Main Content******************************************************************************/
     let colorSlider = $(".colors-types .slick-slider");
@@ -240,11 +211,8 @@ $(function () {
     /////////////////////////////////////////////////////////////////
 
     productSelect.text(homeProducts.attr('data-path'));
+
     /////////////**view********** */
-
-
-
-
     function setProdType(lipsobj) {
         let colors = lipsobj[0].colors,
             img = lipsobj[1].selectedimg,
@@ -371,20 +339,36 @@ $(function () {
 
     });
 
-
-
-
-
-
-
     ////////////////////////////////////////
-    calcDimetions();
+
+    initiaizeMenu();
     checkWindow();
     $(window).on('resize', function () {
         checkWindow();
-        // calcDimetions();
         setTopValue();
     });
+    $(window).on('scroll', function () {
+        if (menu.hasClass('show')) {
+            hamburgerIcon.click();
+        }
+
+        if ($(this).scrollTop() > 150) {
+            if (header.not('.sticky')) {
+                header.addClass('sticky')
+                upperHead.addClass('d-none');
+                setTopValue();
+
+            }
+        } else {
+            if (header.hasClass('sticky')) {
+                header.removeClass('sticky');
+                upperHead.removeClass('d-none');
+                setTopValue();
+            }
+
+        }
+
+    })
 
 
 })
