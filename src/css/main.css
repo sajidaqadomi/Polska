@@ -412,7 +412,7 @@ header {
   line-height: 1.5; }
 
 .product-details {
-  background-image: url("/imgs/product-details-bg.jpg");
+  background-image: url("../../imgs/product-details-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
