@@ -166,7 +166,7 @@ $(function () {
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
-                },
+                }
                 // {
                 //   breakpoint: 480,
                 //   settings: {
@@ -192,8 +192,49 @@ $(function () {
 
             dots: true,
             autoplay: true,
+            pauseOnHover: true
 
         });
+    }
+
+    function initRelatedSlick(slickRelated) {
+        slickRelated.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows: false,
+            dots: false,
+            cssEase: true,
+            //focusOnSelect: true,
+            centerPadding: '45px',
+            // autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        vertical: false,
+                        arrows: false,
+                        //  centerMode: true,
+                        // centerPadding: '40px',
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // {
+                //   breakpoint: 480,
+                //   settings: {
+                //     arrows: false,
+                //     centerMode: true,
+                //     centerPadding: '40px',
+                //     slidesToShow: 1
+                //   }
+                // }
+            ]
+
+
+
+        });
+
     }
 
     /////////////////////////////////////////////////////////////////
@@ -260,14 +301,11 @@ $(function () {
 
     }
     //////
-    /**
-     * lipsStick">
-                <div class="slick-slider horizantal
-     */
+
     function setlipsImgs(lipstickimgs) {
         let slickLips = $('.lipsStick .slick-slider');
         lipstickimgs.map(item => {
-            console.log(item);
+            //console.log(item);
             let { src, srcset } = item;
             let sliderItem = `<div class='slider-item'>
             <img src=${src}
@@ -279,6 +317,38 @@ $(function () {
         });
         initLipsSlick(slickLips);
     }
+
+    function setrelatedItems(relateditems) {
+        let slickRelated = $('.related-item .slick-slider')
+        relateditems.map(item => {
+            let { src, srcset, name, mark, type } = item;
+            let sliderItem = `<div class="card-wrapper">
+             
+              <div class="card text-center"">
+            <div class='img-container card-img-top'> 
+              <img class="img" src=${src}  srcset=${srcset} alt=${name}>
+            </div>
+           
+            <div class="card-body">
+              <h5 class="card-title name">${name}</h5>
+              
+            </div>
+            <div class="card-footer">
+            <h6 class="card-subtitle mb-2 text-muted type">${type}</h6>
+              <p class="desc">${mark}</p>
+            </div>
+            <div class='cart icon'><img src='imgs/cart(2).svg' alt='cart'></div>
+          </div>
+          
+           
+            </div>`
+            slickRelated.append(sliderItem);
+
+
+        })
+        initRelatedSlick(slickRelated);
+
+    }
     /*ajax req***************************************************************************************/
     $.ajax({
         type: "Get",
@@ -286,12 +356,13 @@ $(function () {
         data: "",
         dataType: 'jsonp',
         success: function (response) {
-            let lipsobj = response.lips;
-            let lipstickimgs = response.lipstickimgs;
-            console.log(lipstickimgs);
+            let { lips, lipstickimgs, relateditems } = response;
+            //let lipstickimgs = response.lipstickimgs;
+            //console.log(lipstickimgs);
 
-            setProdType(lipsobj);
+            setProdType(lips);
             setlipsImgs(lipstickimgs);
+            setrelatedItems(relateditems);
 
         },
         error: function (xhr, status, error) {
