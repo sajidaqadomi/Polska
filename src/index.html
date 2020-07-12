@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendors/jquery.multilevelpushmenu.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -149,7 +160,7 @@
           <!-- <div class="line"></div> -->
         </form>
       </div>
-      <div id="menu" class="d-flex d-lg-none">
+      <div id="menu" class="d-flex d-md-none">
         <nav>
           <ul class="nav-list">
             <li class="list-item active">
@@ -186,7 +197,119 @@
         </nav>
       </div>
     </header>
-    <div class="main-content"></div>
+    <main class="main-content">
+      <div
+        class="home-products-li d-none d-md-block"
+        data-path="Home ・ Products ・ Lips ・ Joli Color Shine long lasting lipstick"
+      >
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-12">
+              <p class="product-select"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="products">
+        <div class="container">
+          <div class="row no-gutters justify-content-md-between">
+            <div class="col-12 col-md-4 out-lcontainer order-2 order-md-1">
+              <div class="colors-types unit">
+                <div class="slick-slider vertical">
+                  <!-- from api -->
+                </div>
+                <a href="#" class="prev-arrow arrow d-none d-md-flex">
+                  <img src="imgs/up.svg" alt="up" />
+                </a>
+                <a href="#" class="next-arrow arrow d-none d-md-flex">
+                  <img src="imgs/down.svg" alt="down" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 order-1 order-md-2">
+              <div class="lipsStick unit">
+                <div class="slick-slider horizantal"></div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 order-3">
+              <div
+                class="buy-product d-flex flex-column justify-content-between unit"
+              >
+                <div class="product-info d-flex justify-content-between item">
+                  <span class="name"
+                    >Joli Color Shine long lasting lipstick</span
+                  >
+                  <span class="price">$50 </span>
+                </div>
+                <div class="quiz d-flex d-flex justify-content-between item">
+                  <span class="name">Quiz Cosmetic</span>
+                  <span class="code">Code 00148 </span>
+                </div>
+                <div class="quantity d-flex justify-content-between item">
+                  <span class="name">quantity</span>
+                  <div class="select-number d-flex justify-content-between">
+                    <div class="icon">
+                      <img src="imgs/minus.svg" class="Minus" />
+                    </div>
+                    <span class="number">3</span>
+                    <div class="icon">
+                      <img src="imgs/plus.svg" class="Plus" />
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="product-actions d-flex flex-column justify-content-between item"
+                >
+                  <a href="#" class="action-buy btn w-100">BUY</a>
+                  <a href="#" class="add-to-cart btn w-100"
+                    ><img src="imgs/cart(1).svg" class="Cart" />
+                    <span>Add to Cart</span></a
+                  >
+                </div>
+                <div class="rate d-flex justify-content-start item">
+                  <p class="name">rating <span>(32)</span></p>
+                  <ul class="rate-list d-flex">
+                    <li class="list-item"><i class="fa fa-star"></i></li>
+                    <li class="list-item"><i class="fa fa-star"></i></li>
+                    <li class="list-item"><i class="fa fa-star"></i></li>
+                    <li class="list-item"><i class="fa fa-star"></i></li>
+                    <li class="list-item"><i class="fa fa-star"></i></li>
+                  </ul>
+                </div>
+                <div class="social-contact">
+                  <h3 class="social-title">share</h3>
+                  <ul class="social-list d-flex justify-content-between">
+                    <li class="item">
+                      <a href="#"
+                        ><img src="imgs/facebook (1).svg" alt="facebook"
+                      /></a>
+                    </li>
+                    <li class="item">
+                      <a href="#"
+                        ><img src="imgs/twitter (1).svg" alt="twitter"
+                      /></a>
+                    </li>
+                    <li class="item">
+                      <a href="#"
+                        ><img src="imgs/instagram (1).svg" alt="instagram"
+                      /></a>
+                    </li>
+                    <li class="item">
+                      <a href="#"
+                        ><img src="imgs/pinterest (1).svg" alt="pinterest"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="content">
@@ -224,22 +347,22 @@
                 <div class="social-contact">
                   <h3 class="social-title">Follow Us</h3>
                   <ul class="social-list d-flex justify-content-between">
-                    <li>
+                    <li class="item">
                       <a href="#"
                         ><img src="imgs/facebook.svg" alt="facebook"
                       /></a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"
                         ><img src="imgs/twitter.svg" alt="twitter"
                       /></a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"
                         ><img src="imgs/instagram.svg" alt="instagram"
                       /></a>
                     </li>
-                    <li>
+                    <li class="item">
                       <a href="#"
                         ><img src="imgs/pinterest.svg" alt="pinterest"
                       /></a>
@@ -267,5 +390,9 @@
   <script src="js/vendors/popper.min.js"></script>
   <script src="js/vendors/jquery.multilevelpushmenu.min.js"></script>
   <script src="js/vendors/bootstrap.min.js"></script>
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
   <script src="js/main.js"></script>
 </html>

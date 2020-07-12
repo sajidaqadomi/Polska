@@ -1,0 +1,41 @@
+section {
+    padding: 2em 0;
+    border-top: 1px solid rgba($mainGColor, 1);
+
+    .buy-product {
+        padding-top: 2em;
+    }
+
+    @media #{$minMed} {
+        padding: 4.25em 0;
+
+        &.products {
+            padding: 0;
+
+            .unit {
+                padding: 4.25em 0;
+
+            }
+
+        }
+
+    }
+
+}
+
+.social-list {
+    .item {
+        cursor: pointer;
+
+        img {
+            // background-color: transparent;
+
+            &:hover {
+                box-shadow: 2px 2px 15px rgba($subFColor, .5);
+            }
+
+        }
+
+
+    }
+}

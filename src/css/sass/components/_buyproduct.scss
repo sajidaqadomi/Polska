@@ -1,0 +1,161 @@
+.buy-product {
+    height: 100%;
+    // padding-top: 2em;//formobile
+
+
+    @media #{$minMed} {
+        border-left: 1px solid $mainGColor;
+        padding-left: 2em !important;
+
+    }
+
+
+    .item {
+        margin-bottom: 1em;
+
+        @media #{$minMed} {
+            margin-bottom: 0;
+            padding-top: 0;
+
+        }
+    }
+
+    .product-info {
+        * {
+            font-size: 1.125em;
+            font-weight: bold;
+            line-height: 1.33;
+
+        }
+
+    }
+
+    .quiz {
+        .name {
+            @extend %namefont;
+            color: $subFColor;
+        }
+
+        .code {
+            font-size: .875em;
+            font-weight: 600;
+            line-height: 1.71;
+        }
+    }
+
+    .quantity {
+        .name {
+            @extend %namefont;
+        }
+
+        .select-number {
+            .icon {
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    top: -2px;
+                    box-shadow: 1px 2px 12px rgba($mainBColor, .12);
+
+                }
+            }
+
+            .number {
+                font-size: .72;
+                font-weight: 600;
+                width: 68px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($mainGColor, .6);
+                margin: 0 1em;
+            }
+        }
+    }
+
+    .product-actions {
+        .btn {
+
+            transition: all .3s ease-in-out;
+            color: $mainFColor;
+            font-weight: bold;
+            height: 64px;
+            @include flexCenter; //
+            justify-content: center; //
+
+
+            &.action-buy {
+                background-color: rgba($subFColor, .8);
+                font-size: 1.125em;
+                //  line-height: 0.89;
+                letter-spacing: 1.29px;
+                margin-bottom: 1em;
+
+                &:hover {
+                    background-color: rgba($subFColor, 1);
+
+                }
+
+            }
+
+            &.add-to-cart {
+                border: 1px solid rgba($mainBColor, 1);
+                color: rgba($mainBColor, 1) !important;
+                font-size: .875em;
+                //   line-height: 1.14;
+                letter-spacing: 1px;
+
+                &:hover {
+                    border: 1px solid rgba($subFColor, 1);
+                    color: $subFColor !important;
+
+                }
+
+            }
+        }
+
+
+    }
+
+    .rate {
+        .name {
+            @extend %namefont;
+            margin: 0;
+            margin-right: .5em;
+        }
+
+        .rate-list {
+            .list-item {
+
+                .fa-star {
+                    color: $subFColor !important;
+                }
+
+                &:last-child {}
+            }
+
+        }
+
+    }
+
+    .social-contact {
+        .social-title {
+            font-size: 14px;
+            letter-spacing: .875;
+            margin-bottom: .5em;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+%namefont {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5;
+
+
+
+}
