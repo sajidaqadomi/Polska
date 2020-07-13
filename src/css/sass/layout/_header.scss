@@ -2,12 +2,12 @@ header {
     z-index: 999;
 
     &.sticky {
-       //background-color: $mainBColor !important;
-       position: fixed;
-       top: 0;
-       width: 100%;
-       left: 0;
-   }
+        //background-color: $mainBColor !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
 
     .header-content {
         background-color: $mainBColor !important;
@@ -136,52 +136,6 @@ header {
 
             }
 
-
-
-            // .search-form {
-            //     position: relative;
-
-            //     .search-icon {
-            //         position: absolute;
-            //         z-index: 2;
-            //         top: 50%;
-            //         left: 2%;
-            //         transform: translateY(-50%);
-            //         display: block;
-            //         line-height: 2.375rem;
-            //         pointer-events: none;
-
-            //     }
-
-            //     input {
-            //         padding-left: 1.5em;
-            //         width: 100%;
-            //         background-color: transparent !important;
-            //         border: none;
-            //         width: 90% !important;
-            //         color: $subFColor;
-            //         border-bottom: 1px solid gray;
-
-            //         &:focus {
-            //             &+.line {
-            //                 width: 100%;
-            //             }
-            //         }
-
-            //     }
-
-            //     .line {
-            //         position: absolute;
-            //         bottom: 0;
-            //         left: 0;
-            //         width: 0;
-            //         height: 2px;
-            //         background-color: $subFColor;
-            //         transition: all .3s ease-in-out;
-            //     }
-
-
-            // }
 
 
         }

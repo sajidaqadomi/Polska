@@ -337,6 +337,8 @@ header {
     font-size: .875em;
     font-weight: 600;
     line-height: 1.71; }
+  .buy-product .quantity .name {
+    padding-right: 5px; }
   .buy-product .quantity .select-number .icon {
     border-radius: 50%;
     cursor: pointer;
@@ -398,8 +400,8 @@ header {
   .buy-product .rate .name {
     margin: 0;
     margin-right: .5em; }
-  .buy-product .rate .rate-list .list-item .fa-star {
-    color: #edb15d !important; }
+  .buy-product .rate .rate-list .list-item {
+    margin-right: .3em; }
   .buy-product .social-contact .social-title {
     font-size: 14px;
     letter-spacing: .875;

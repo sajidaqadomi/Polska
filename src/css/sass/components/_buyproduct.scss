@@ -46,6 +46,7 @@
     .quantity {
         .name {
             @extend %namefont;
+            padding-right: 5px;
         }
 
         .select-number {
@@ -128,12 +129,9 @@
 
         .rate-list {
             .list-item {
+                margin-right: .3em;
 
-                .fa-star {
-                    color: $subFColor !important;
-                }
 
-                &:last-child {}
             }
 
         }

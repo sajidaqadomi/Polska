@@ -94,14 +94,17 @@ $(function () {
 
     ///*********checkWindow *************/
     function checkWindow() {
+        menu = $('#menu');
+        // initiaizeMenu();
         calcDimetions();
+        menu.css("left", -menuWidth);
         let contPadding = +($('.container').css('padding-left').slice(0, -2));
         let contMargin = ($('.container').offset().left);
 
 
         if (window.innerWidth < 768) {
 
-            menu.css("left", -menuWidth);
+
             animateMinue();
             outLContainer.css('margin-left', 0);
 
@@ -326,7 +329,7 @@ $(function () {
         success: function (response) {
             let { lips, lipstickimgs, relateditems } = response;
             //let lipstickimgs = response.lipstickimgs;
-            //console.log(lipstickimgs);
+            console.log(lipstickimgs);
 
             setProdType(lips);
             setlipsImgs(lipstickimgs);
@@ -334,7 +337,7 @@ $(function () {
 
         },
         error: function (xhr, status, error) {
-            console.log(lipstickimgs)
+            // console.log(lipstickimgs)
         }
 
     });

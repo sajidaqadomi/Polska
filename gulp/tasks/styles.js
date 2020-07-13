@@ -18,7 +18,7 @@ const css = async (done) => {
             .pipe(sourcemaps.init())
             .pipe(sass({ outputStyle: "expand", }).on('error', sass.logError))
             .pipe(autoprefixer('last 2 versions'))
-            //.pipe( cleanCSS())
+            //.pipe( cleanCSS())//in build
             .pipe(concat("main.css"))
             .pipe(sourcemaps.write('.'))
             .pipe(dest('src/css'))

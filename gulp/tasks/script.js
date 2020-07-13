@@ -12,7 +12,6 @@ const js = async (done) => {
         //src(['node_modules/jquery/dist/jquery.js', "node_modules/popper.js/dist/popper.min.js", "node_modules/bootstrap/dist/js/bootstrap.min.js", scripts.srcScript], { since: lastRun(js) })
         src('src/js/**/*.js')
             .pipe(plumber())
-            // .pipe(plumberNotifier())
             .pipe(sourcemaps.init())
             .pipe(babel({
                 presets: ['@babel/preset-env'],
@@ -23,7 +22,6 @@ const js = async (done) => {
             .pipe(concat("main.min.js"))
             .pipe(sourcemaps.write('.'))
             .pipe(dest('dist/js'))
-            //.pipe(dest(scripts.tempScript))
             .pipe(browserSync.stream())
             .pipe(notify("Gulp Task [js] completed"))
             .on("end", res)
