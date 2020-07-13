@@ -48,7 +48,7 @@ $(function () {
 
     //***********menu********/
 
-    function initiaizeMenu() {
+    function initMenu() {
         $('#menu').multilevelpushmenu(
             {
                 container: $('#menu'),
@@ -94,17 +94,17 @@ $(function () {
 
     ///*********checkWindow *************/
     function checkWindow() {
-        menu = $('#menu');
-        // initiaizeMenu();
+        /// menu = $('#menu');
+
         calcDimetions();
         menu.css("left", -menuWidth);
+
         let contPadding = +($('.container').css('padding-left').slice(0, -2));
         let contMargin = ($('.container').offset().left);
 
-
         if (window.innerWidth < 768) {
-
-
+            initMenu();
+            setTopValue();
             animateMinue();
             outLContainer.css('margin-left', 0);
 
@@ -337,14 +337,14 @@ $(function () {
 
         },
         error: function (xhr, status, error) {
-            // console.log(lipstickimgs)
+
         }
 
     });
 
     ////////////////////////////////////////
 
-    initiaizeMenu();
+
     checkWindow();
     $(window).on('resize', function () {
         checkWindow();

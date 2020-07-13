@@ -156,21 +156,24 @@ header {
             background-color: #edb15d !important; }
         header .header-content .lower-header .navbar .nav-item.active .nav-link {
           background-color: #edb15d !important; }
-  header #menu {
-    position: fixed;
-    width: 100% !important;
-    z-index: 100000; }
-    header #menu .multilevelpushmenu_wrapper .levelHolderClass {
-      background-color: #edb15d !important;
-      width: 100% !important; }
-      header #menu .multilevelpushmenu_wrapper .levelHolderClass li {
-        border-top: 1px solid rgba(0, 0, 0, 0.6) !important;
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out; }
-        header #menu .multilevelpushmenu_wrapper .levelHolderClass li:last-child {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.6) !important; }
-        header #menu .multilevelpushmenu_wrapper .levelHolderClass li:hover {
-          background-color: rgba(237, 177, 93, 0.9) !important; }
+
+#menu {
+  position: fixed;
+  width: 100% !important;
+  z-index: 10000; }
+  #menu .multilevelpushmenu_wrapper .levelHolderClass {
+    background-color: #edb15d !important;
+    width: 100% !important; }
+    #menu .multilevelpushmenu_wrapper .levelHolderClass li {
+      border-top: 1px solid rgba(0, 0, 0, 0.6) !important;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      #menu .multilevelpushmenu_wrapper .levelHolderClass li a {
+        color: #ffffff !important; }
+      #menu .multilevelpushmenu_wrapper .levelHolderClass li:last-child {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6) !important; }
+      #menu .multilevelpushmenu_wrapper .levelHolderClass li:hover {
+        background-color: rgba(237, 177, 93, 0.9) !important; }
 
 .search-form {
   position: relative;

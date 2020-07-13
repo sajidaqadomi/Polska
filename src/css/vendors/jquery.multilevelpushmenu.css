@@ -8,10 +8,10 @@
 }
 
 .multilevelpushmenu_wrapper .levelHolderClass {
-	position: absolute;
+	/* position: absolute; */
 	overflow: hidden;
 	top: 0;
-	background: #336ca6;
+	background: #edb15d;
 	width: auto;
 	min-height: 100%;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -22,30 +22,30 @@
 .multilevelpushmenu_wrapper .ltr {
 	margin-left: -100%;
 	left: 0;
-	-moz-box-shadow: 5px 0 5px -5px #1f4164;
-	-webkit-box-shadow: 5px 0 5px -5px #1f4164;
-	box-shadow: 5px 0 5px -5px #1f4164;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164,direction=90,strength=2);
+	-moz-box-shadow: 5px 0 5px -5px #edb15d;
+	-webkit-box-shadow: 5px 0 5px -5px #edb15d;
+	box-shadow: 5px 0 5px -5px #edb15d;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#edb15d, direction=90, strength=2);
 }
 
 .multilevelpushmenu_wrapper .rtl {
 	margin-right: -100%;
 	right: 0;
-	-moz-box-shadow: 5px 0 5px 5px #1f4164;
-	-webkit-box-shadow: 5px 0 5px 5px #1f4164;
-	box-shadow: 5px 0 5px 5px #1f4164;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164,direction=270,strength=2);
+	-moz-box-shadow: 5px 0 5px 5px #edb15d;
+	-webkit-box-shadow: 5px 0 5px 5px #edb15d;
+	box-shadow: 5px 0 5px 5px #edb15d;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#edb15d, direction=270, strength=2);
 }
 
 .multilevelpushmenu_wrapper .multilevelpushmenu_inactive {
-	background: #2e6196;
+	background: #edb15d;
 }
 
 .multilevelpushmenu_wrapper h2 {
 	font-size: 1.5em;
 	line-height: 1em;
 	font-weight: bold;
-	color: #1f4164;
+	color: #edb15d;
 	padding: 0 .4em 0 .4em;
 }
 
@@ -57,16 +57,16 @@
 
 .multilevelpushmenu_wrapper li {
 	cursor: pointer;
-	border-top: 1px solid #295685;
+	border-top: 1px solid #edb15d;
 	padding: .4em .4em .4em .4em;
 }
 
 .multilevelpushmenu_wrapper li:last-child {
-	border-bottom: 1px solid #295685;
+	border-bottom: 1px solid #edb15d;
 }
 
 .multilevelpushmenu_wrapper li:hover {
-	background-color: #295685;
+	background-color: #edb15d;
 }
 
 .multilevelpushmenu_wrapper a {
@@ -77,7 +77,7 @@
 	line-height: 1em;
 	padding: .2em .2em;
 	text-decoration: none;
-	color: #fff;
+	color: #fff !important;
 }
 
 .multilevelpushmenu_wrapper a:hover {
@@ -87,8 +87,8 @@
 .multilevelpushmenu_wrapper .backItemClass {
 	display: block;
 	padding: .4em .4em .4em .4em;
-	background: #2e6196;
-	border-top: 1px solid #295685;
+	background: #edb15d;
+	border-top: 1px solid #edb15d;
 }
 
 .multilevelpushmenu_wrapper .floatRight {
@@ -111,7 +111,6 @@
 	padding: 0 0 0 .4em;
 }
 
-.multilevelpushmenu_wrapper h2 > img,
-.multilevelpushmenu_wrapper a > img {
-    max-height: 1em;
+.multilevelpushmenu_wrapper h2>img, .multilevelpushmenu_wrapper a>img {
+	max-height: 1em;
 }
