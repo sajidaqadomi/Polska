@@ -1,16 +1,68 @@
-ul {
-    list-style-type: none !important;
-    padding: 0 !important;
-    // margin-bottom: 0 !important;
+body {
+    &:not(p) {
+        text-transform: capitalize;
+    }
 }
 
-a {
-    text-decoration: none !important;
-    color: $mainFColor !important;
-    cursor: pointer;
-    text-transform: uppercase !important;
+a.link {
     transition: all .3s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
+
+ul,
+ol {
+    &.list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            &.link {
+                // text-decoration: none;
+                color: $mainFColor;
+                cursor: pointer;
+                display: block;
+
+                color: $mainFColor;
+
+                &:hover {
+
+                    color: $subFColor;
+                }
+
+                &.mainlink {
+                    text-transform: uppercase;
+                    color: $mainFColor;
+                    font-size: 13px;
+                }
+
+            }
+
+
+        }
+
+
+
+    }
+
+}
+
+.slick-slider {
+    .slick-slide {
+        outline: none;
+        border: none;
+
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+
 
 button {
     outline: none;
@@ -30,4 +82,59 @@ input {
         outline: none;
     }
 
+}
+
+
+.container {
+    &.out-container {
+
+        @media (min-width: 768px) {
+            &.left {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            &.right {
+                padding-right: 0;
+                margin-right: 0;
+            }
+
+            max-width: $MWContainerMed;
+
+
+            &.right {
+                .slick-space {
+                    width: $offsetLMed;
+                }
+
+            }
+
+        }
+
+        @media (min-width: 992px) {
+            max-width: $MWContainerlg;
+
+            &.right {
+                .slick-space {
+                    width: $offsetLLg;
+
+                }
+            }
+        }
+
+        @media (min-width: 1200px) {
+            max-width: $MWContainerxl;
+
+
+            &.right {
+                .slick-space {
+                    width: $offsetLXl;
+                }
+            }
+
+        }
+
+
+
+    }
 }

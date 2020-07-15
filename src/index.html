@@ -7,6 +7,7 @@
     <title>Polska</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="webfontkit-20200714-142809/stylesheet.css" />
     <link rel="stylesheet" href="css/vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendors/jquery.multilevelpushmenu.css" />
     <link
@@ -36,43 +37,44 @@
               class="row justify-content-around justify-content-lg-between align-items-center no-gutters"
             >
               <div class="col-6 col-md-2 col-lg-2">
-                <ul class="icons-list">
+                <ul class="icons-list list">
                   <li class="icons-item">
-                    <a href="#" class="icon-link">
-                      <img
-                        src="imgs/makeup-artists.svg"
-                        alt="makeup-artists" /></a
-                    ><br /><span class="icon-desc d-none d-lg-block"
-                      >Makeup Artists
-                    </span>
+                    <a href="#" class="icon-link link">
+                      <img src="imgs/makeup-artists.svg" alt="makeup-artists" />
+                      <span class="icon-desc d-none d-lg-block">
+                        Makeup Artists
+                      </span>
+                    </a>
                   </li>
 
                   <li class="icons-item">
-                    <a href="tel:123-456-7890" class="icon-link"
-                      ><img src="imgs/phone.svg" alt="Phone" /></a
-                    ><br /><span class="icon-desc d-none d-lg-block"
-                      >Call Us
-                    </span>
+                    <a href="tel:123-456-7890" class="icon-link link"
+                      ><img src="imgs/phone.svg" alt="Phone" /><span
+                        class="icon-desc d-none d-lg-block"
+                        >Call Us
+                      </span>
+                    </a>
                   </li>
                 </ul>
               </div>
               <div class="d-none d-md-block col-md-8">
-                <p class="logo-img"><img src="imgs/logo.svg" alt="logo" /></p>
+                <div class="logo-img">
+                  <img src="imgs/logo.svg" alt="logo" />
+                </div>
               </div>
               <div class="col-6 col-md-2 col-lg-2">
-                <ul class="icons-list">
+                <ul class="icons-list list">
                   <li class="icons-item cart" data-cart="5">
-                    <p class="m-0 p-0">
+                    <a href="#" class="icon-link link">
                       <img src="imgs/cart.svg" alt="makeup-artists" />
-                    </p>
-                    <span class="icon-desc d-none d-lg-block">cart </span>
+                      <span class="icon-desc d-none d-lg-block">cart </span>
+                    </a>
                   </li>
                   <li class="icons-item">
-                    <a href="#" class="icon-link"
-                      ><img src="imgs/account.svg" alt="acount" /></a
-                    ><br /><span class="icon-desc d-none d-lg-block"
-                      >hi sara</span
-                    >
+                    <a href="#" class="icon-link link"
+                      ><img src="imgs/account.svg" alt="acount" />
+                      <span class="icon-desc d-none d-lg-block">hi sara</span>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -84,29 +86,37 @@
             <div
               class="row justify-content-between align-items-center no-gutters"
             >
-              <div class="col-4 col-md-10">
+              <div class="col-4 col-md-11 col-lg-9">
                 <nav
                   class="navbar navbar-expand-md navbar-light d-none d-md-flex"
                 >
                   <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto d-none d-md-flex">
+                    <ul class="navbar-nav mr-auto d-none d-md-flex list">
                       <li class="nav-item active">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link link mainlink" href="#">Products</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Online Catalogues</a>
+                        <a class="nav-link link mainlink" href="#"
+                          >Online Catalogues</a
+                        >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Find our Stores</a>
+                        <a class="nav-link link mainlink" href="#"
+                          >Find our Stores</a
+                        >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">New Products</a>
+                        <a class="nav-link link mainlink" href="#"
+                          >New Products</a
+                        >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link link mainlink" href="#">About Us</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link link mainlink" href="#"
+                          >Contact Us</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -123,19 +133,24 @@
                 </button>
               </div>
               <div class="col-4 d-inline-block d-md-none">
-                <p class="logo-img"><img src="imgs/logo.svg" alt="logo" /></p>
+                <div class="logo-img">
+                  <img src="imgs/logo.svg" alt="logo" />
+                </div>
               </div>
 
-              <div class="col-4 col-md-2">
-                <form class="search-form d-none d-md-flex">
-                  <p class="search-icon m-0">
+              <div class="col-4 col-md-1 col-lg-3">
+                <form class="search-form d-none d-lg-flex">
+                  <div class="search-icon m-0">
                     <img src="imgs/search.svg" alt="search" />
-                  </p>
-                  <input type="text" class="" placeholder="Search" />
+                  </div>
+                  <input
+                    type="text"
+                    class=""
+                    placeholder="Search for product, brand, ..etc"
+                  />
                   <div class="line"></div>
                 </form>
-
-                <div class="search-icon d-flex d-md-none justify-content-end">
+                <div class="search-icon d-flex d-lg-none justify-content-end">
                   <a
                     href="#search-area"
                     class="link-search"
@@ -156,46 +171,55 @@
         </div>
       </div>
 
-      <div class="form-wrapper d-md-none collapse" id="search-area">
+      <div class="form-wrapper d-lg-none collapse" id="search-area">
         <form class="search-form mobile m-0">
-          <p class="search-icon m-0">
+          <!-- <p class="search-icon m-0">
             <img src="imgs/search.svg" alt="search" />
-          </p>
-          <input type="text" class="" placeholder="Search" />
+          </p> -->
+          <input
+            type="text"
+            class=""
+            placeholder="Search for product, brand, ..etc"
+          />
           <!-- <div class="line"></div> -->
         </form>
       </div>
     </header>
     <div id="menu" class="d-flex d-md-none">
       <nav>
-        <ul class="nav-list">
+        <ul class="nav-list list">
+          <li class="list-item">
+            <a href="#" class="link mainlink"
+              >Home <i class="fa fa-angle-right icon"></i
+            ></a>
+          </li>
           <li class="list-item active">
-            <a href="#" class="link"
-              >Product <i class="fa fa-angle-right icon"></i
+            <a href="#" class="link mainlink"
+              >Products <i class="fa fa-angle-right icon"></i
             ></a>
           </li>
           <li class="list-item">
-            <a href="#" class="link"
+            <a href="#" class="link mainlink"
               >Online Catalogues <i class="fa fa-angle-right icon"></i
             ></a>
           </li>
           <li class="list-item">
-            <a href="#" class="link"
+            <a href="#" class="link mainlink"
               >Find our Stores <i class="fa fa-angle-right icon"></i
             ></a>
           </li>
           <li class="list-item">
-            <a href="#" class="link"
+            <a href="#" class="link mainlink"
               >New Products <i class="fa fa-angle-right icon"></i
             ></a>
           </li>
           <li class="list-item">
-            <a href="#" class="link"
+            <a href="#" class="link mainlink"
               >About Us <i class="fa fa-angle-right icon"></i
             ></a>
           </li>
           <li class="list-item">
-            <a href="#" class="link">
+            <a href="#" class="link mainlink">
               Contact Us <i class="fa fa-angle-right icon"></i
             ></a>
           </li>
@@ -203,29 +227,37 @@
       </nav>
     </div>
     <main class="main-content">
-      <div
-        class="home-products-li d-none d-md-block"
-        data-path="Home ・ Products ・ Lips ・ Joli Color Shine long lasting lipstick"
-      >
-        <div class="container">
-          <div class="row no-gutters">
-            <div class="col-12">
-              <p class="product-select"></p>
-            </div>
+      <div class="breadcrumb-area d-none d-lg-block">
+        <nav aria-label="breadcrumb">
+          <div class="container">
+            <ol class="breadcrumb list">
+              <li class="breadcrumb-item list-item">
+                <a href="#" class="link">Home</a>
+              </li>
+              <li class="breadcrumb-item list-item">
+                <a href="#" class="link">Products</a>
+              </li>
+              <li class="breadcrumb-item list-item">
+                <a href="#" class="link">Lips</a>
+              </li>
+              <li class="breadcrumb-item list-item active" aria-current="page">
+                Joli Color Shine long lasting lipstick
+              </li>
+            </ol>
           </div>
-        </div>
+        </nav>
       </div>
       <section class="products">
-        <div class="container">
+        <div class="container out-container left">
           <div class="row no-gutters justify-content-md-between">
-            <div class="col-12 col-md-4 out-lcontainer order-2 order-md-1">
-              <div class="colors-types unit">
-                <div class="slick-slider vertical">
-                  <!-- from api -->
-                </div>
+            <div class="col-12 col-md-4 order-2 order-md-1">
+              <div class="colors-types">
                 <a href="#" class="prev-arrow arrow d-none d-md-flex">
                   <img src="imgs/up.svg" alt="up" />
                 </a>
+                <div class="slick-slider vertical" id="lips-color">
+                  <!-- from api -->
+                </div>
                 <a href="#" class="next-arrow arrow d-none d-md-flex">
                   <img src="imgs/down.svg" alt="down" />
                 </a>
@@ -242,24 +274,27 @@
               <div
                 class="buy-product d-flex flex-column justify-content-between unit"
               >
-                <div class="product-info d-flex justify-content-between item">
-                  <span class="name"
-                    >Joli Color Shine long lasting lipstick</span
-                  >
-                  <span class="price">$50 </span>
+                <div>
+                  <div class="product-info d-flex justify-content-between item">
+                    <span class="name"
+                      >Joli Color Shine long lasting lipstick</span
+                    >
+                    <span class="price">$50 </span>
+                  </div>
+                  <div class="quiz d-flex d-flex justify-content-between item">
+                    <span class="name">Quiz Cosmetic</span>
+                    <span class="code">Code 00148 </span>
+                  </div>
                 </div>
-                <div class="quiz d-flex d-flex justify-content-between item">
-                  <span class="name">Quiz Cosmetic</span>
-                  <span class="code">Code 00148 </span>
-                </div>
+
                 <div class="quantity d-flex justify-content-between item">
                   <span class="name">quantity</span>
                   <div class="select-number d-flex justify-content-between">
-                    <div class="icon">
+                    <div class="icon icon-minus">
                       <img src="imgs/minus.svg" class="Minus" />
                     </div>
-                    <span class="number">3</span>
-                    <div class="icon">
+                    <span class="number">0</span>
+                    <div class="icon icon-plus">
                       <img src="imgs/plus.svg" class="Plus" />
                     </div>
                   </div>
@@ -268,17 +303,17 @@
                 <div
                   class="product-actions d-flex flex-column justify-content-between item"
                 >
-                  <a href="#" class="action-buy btn w-100">BUY</a>
-                  <a href="#" class="add-to-cart btn w-100"
-                    ><img src="imgs/cart(1).svg" class="Cart" />
-                    <span>Add to Cart</span></a
-                  >
+                  <button class="action-buy btn w-100">BUY</button>
+                  <button class="add-to-cart btn w-100">
+                    <img src="imgs/cart(1).svg" class="Cart" />
+                    <span>Add to Cart</span>
+                  </button>
                 </div>
                 <div
                   class="rate d-flex justify-content-start align-items-center item"
                 >
-                  <p class="name">rating <span>(32)</span></p>
-                  <ul class="rate-list d-flex">
+                  <p class="name my-0 ml-0">rating <span>(32)</span></p>
+                  <ul class="rate-list d-flex list align-items-center">
                     <li class="list-item">
                       <img src="imgs/star.svg" alt="star" />
                     </li>
@@ -298,7 +333,7 @@
                 </div>
                 <div class="social-contact">
                   <h3 class="social-title">share</h3>
-                  <ul class="social-list d-flex justify-content-between">
+                  <ul class="social-list d-flex justify-content-start list">
                     <li class="item">
                       <a href="#"
                         ><img src="imgs/facebook (1).svg" alt="facebook"
@@ -328,13 +363,13 @@
       </section>
       <section class="product-details">
         <div class="content">
-          <div class="container">
-            <div class="row no-gutters">
-              <div class="col-md-3 d-none d-md-flex"></div>
-              <div class="col-12 col-md-9">
+          <div class="container out-container left">
+            <div class="row no-gutters justify-content-between">
+              <div class="col-md-4 d-none d-md-flex"></div>
+              <div class="col-12 col-md-8">
                 <h2 class="title">Product Details</h2>
                 <h3 class="name">Joli Color Matte long lasting lipstick</h3>
-                <p class="desc">
+                <p class="desc m-0">
                   Creamy texture of this matte lipstick gives comfort and
                   confidence for a long time. Saves shade intensity for all day
                   without leaking. It contains Vitamin E, which will kepp your
@@ -347,23 +382,23 @@
         </div>
       </section>
       <section class="related-item">
-        <div class="container">
+        <div class="container out-container left">
           <div class="row no-gutters">
-            <div class="col-md-3 d-none d-md-flex"></div>
+            <div class="col-md-4 d-none d-md-flex"></div>
             <div
-              class="col-12 col-md-9 d-flex justify-content-between align-items-center"
+              class="col-12 col-md-8 d-flex justify-content-between align-items-center"
             >
-              <h2 class="title">Related Items</h2>
+              <h2 class="title related">Related Items</h2>
               <a href="#" class="view-link"
                 >VIEW All <i class="fa fa-arrow-right"></i
               ></a>
             </div>
           </div>
         </div>
-        <div class="">
+        <div class="container out-container right">
           <div class="row no-gutters">
-            <div class="col-md-3"></div>
-            <div class="col-md-9 out-rcontainer">
+            <div class="col-md-auto d-none d-md-flex slick-space"></div>
+            <div class="col">
               <div class="slick-slider related"></div>
             </div>
           </div>
@@ -373,40 +408,56 @@
     <footer class="footer">
       <div class="container">
         <div class="content">
-          <div class="row">
+          <div class="row no-gutters">
             <div class="col-12 col-md-4">
-              <p class="logo-img logo-footer">
+              <div class="logo-img logo-footer">
                 <img src="imgs/logo.svg" alt="logo" />
-              </p>
+              </div>
               <div class="footer-links d-flex">
                 <ul class="list">
-                  <li class="list-item"><a href="#">Products</a></li>
-                  <li class="list-item"><a href="#">Online Catalogues</a></li>
-                  <li class="list-item"><a href="#">Find our Stores</a></li>
+                  <li class="list-item">
+                    <a href="#" class="link mainlink">Products</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#" class="link mainlink">Online Catalogues</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#" class="link mainlink">Find our Stores</a>
+                  </li>
                 </ul>
                 <ul class="list">
-                  <li class="list-item"><a href="#">New Products</a></li>
-                  <li class="list-item"><a href="#">About Us</a></li>
-                  <li class="list-item"><a href="#">Contact Us</a></li>
+                  <li class="list-item">
+                    <a href="#" class="link mainlink">New Products</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#" class="link mainlink">About Us</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#" class="link mainlink">Contact Us</a>
+                  </li>
                 </ul>
               </div>
-              <p class="copyright d-none d-md-flex">
+              <div class="copyright d-none d-md-flex">
                 © 2020 Polska Cosmetics
-              </p>
+              </div>
             </div>
             <div class="col-md-4 d-none d-md-flex align-self-end">
-              <p class="privacy-content">
-                <a href="#"
+              <div class="privacy-content">
+                <a href="#" class="link"
                   >Privacy<span class="privacy-sepratator">.</span>Terms</a
                 >
-              </p>
+              </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3 offset-md-1">
               <div class="footerContact">
-                <p class="tel-number"><a href="#">+972 59-237-0033</a></p>
+                <div class="tel-number">
+                  <a href="#" class="link">+972 59-237-0033</a>
+                </div>
                 <div class="social-contact">
                   <h3 class="social-title">Follow Us</h3>
-                  <ul class="social-list d-flex justify-content-between">
+                  <ul
+                    class="social-list d-flex justify-content-start justify-content-md-between list"
+                  >
                     <li class="item">
                       <a href="#"
                         ><img src="imgs/facebook.svg" alt="facebook"
@@ -431,15 +482,17 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 d-block d-md-none">
-              <p class="copyright d-block d-md-none">
-                © 2020 Polska Cosmetics
-              </p>
-              <p class="privacy-content">
-                <a href="#"
+            <div class="col-12 d-flex d-md-none mb-1">
+              <div class="copyright d-block d-md-none">
+                <p class="m-0">© 2020 Polska Cosmetics</p>
+              </div>
+            </div>
+            <div class="col-12 d-flex d-md-none">
+              <div class="privacy-content">
+                <a href="#" class="link"
                   >Privacy<span class="privacy-sepratator">.</span>Terms</a
                 >
-              </p>
+              </div>
             </div>
           </div>
         </div>

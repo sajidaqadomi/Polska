@@ -1,17 +1,43 @@
 .footer {
     background-color: rgba($mainBColor, 1);
-    padding: 2em 0;
+    padding-top: 52px;
+    padding-bottom: 46px;
+
+    @media #{minMed} {
+        padding-top: 72px;
+        padding-bottom: 56px;
+
+    }
+
+
+
+    .logo-footer {
+        // margin-bottom: 60px;
+    }
 
     .footer-links {
         justify-content: space-between;
 
         .list {
+            margin: 60px 0 32px 0;
+
+            &:first-child {
+                .list-item {
+                    margin-right: 10px;
+                }
+            }
+
             .list-item {
-                a {
-                    transition: all .3s ease-in-out;
+                margin-bottom: 8px;
+
+                .link {
+                    //transition: all .3s ease-in-out;
+                    font-weight: bold;
+                    line-height: 1.23;
+                    letter-spacing: .5px;
 
                     &:hover {
-                        color: $subFColor !important;
+                        color: $subFColor;
                     }
                 }
             }
@@ -25,11 +51,19 @@
         justify-content: space-between;
 
         .tel-number {
+            margin-bottom: 12px;
+
+            @media #{$minMed} {
+                margin-bottom: 0;
+            }
+
             a {
-                color: rgba($subFColor, .8) !important;
+                color: rgba($subFColor, .8);
+                line-height: 1.65;
+                font-size: 17px;
 
                 &:hover {
-                    color: rgba($subFColor, 1) !important;
+                    color: rgba($subFColor, 1);
 
                 }
             }
@@ -39,20 +73,31 @@
             // justify-self: end;
 
             .social-title {
+                margin-bottom: 22px;
+
+                @media #{menMed} {
+                    margin-bottom: 32px;
+                }
+
                 color: $mainFColor;
-                margin-bottom: 1em;
+
                 font-weight: bold;
                 font-size: 13px;
-
-
-
+                line-height: 1.23px;
+                letter-spacing: .5px;
             }
 
             .social-list {
+                margin-bottom: 22px;
 
-                //margin-bottom: 0;
+                .item {
+                    margin-right: 17px;
+                }
+
                 @media #{$minMed} {
                     margin-bottom: 0;
+
+
                 }
             }
         }
@@ -61,17 +106,18 @@
     .privacy-content {
         text-align: center;
         width: 100%;
-        @extend %smallfont;
+
 
         a {
+            @extend %smallfont;
+
             &:hover {
-                color: rgba($subFColor, 1) !important;
+                color: rgba($subFColor, 1);
             }
         }
 
         .privacy-sepratator {
-            padding: 0 10px !important;
-
+            padding: 0 10px;
 
         }
 
@@ -81,12 +127,13 @@
         @extend %smallfont;
 
 
+
     }
 }
 
 %smallfont {
-    font-size: 12px !important;
-    font-weight: normal;
-    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: .51px;
     color: $mainFColor;
 }

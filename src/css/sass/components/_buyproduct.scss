@@ -1,26 +1,33 @@
 .buy-product {
     height: 100%;
-    // padding-top: 2em;//formobile
-
+    padding-top: 2em; //formobile
 
     @media #{$minMed} {
         border-left: 1px solid $mainGColor;
-        padding-left: 2em !important;
-
+        padding-left: 2em;
     }
 
-
     .item {
-        margin-bottom: 1em;
+        margin-bottom: 1em; //for mobile
 
         @media #{$minMed} {
             margin-bottom: 0;
-            padding-top: 0;
+            // padding-top: 0;
 
+        }
+
+        .name {
+            margin-right: 15px;
         }
     }
 
     .product-info {
+        margin-bottom: 12px;
+
+        .name {
+            //  margin-right:15px;
+        }
+
         * {
             font-size: 1.125em;
             font-weight: bold;
@@ -46,7 +53,7 @@
     .quantity {
         .name {
             @extend %namefont;
-            padding-right: 5px;
+
         }
 
         .select-number {
@@ -85,17 +92,20 @@
             height: 64px;
             @include flexCenter; //
             justify-content: center; //
+            border-radius: 0;
+            text-transform: uppercase;
 
 
             &.action-buy {
                 background-color: rgba($subFColor, .8);
                 font-size: 1.125em;
-                //  line-height: 0.89;
+                line-height: 0.89;
                 letter-spacing: 1.29px;
                 margin-bottom: 1em;
 
                 &:hover {
                     background-color: rgba($subFColor, 1);
+                    box-shadow: 1px 2px 15px rgba($mainBColor, .18);
 
                 }
 
@@ -103,14 +113,15 @@
 
             &.add-to-cart {
                 border: 1px solid rgba($mainBColor, 1);
-                color: rgba($mainBColor, 1) !important;
+                color: rgba($mainBColor, 1);
                 font-size: .875em;
-                //   line-height: 1.14;
+                line-height: 1.14;
                 letter-spacing: 1px;
 
                 &:hover {
                     border: 1px solid rgba($subFColor, 1);
-                    color: $subFColor !important;
+                    box-shadow: 1px 2px 15px rgba($mainBColor, .2);
+                    //color: $subFColor;
 
                 }
 
@@ -123,13 +134,13 @@
     .rate {
         .name {
             @extend %namefont;
-            margin: 0;
-            margin-right: .5em;
+
+            // margin-right: .5em;
         }
 
         .rate-list {
             .list-item {
-                margin-right: .3em;
+                margin-right: .75em;
 
 
             }
@@ -141,9 +152,17 @@
     .social-contact {
         .social-title {
             font-size: 14px;
-            letter-spacing: .875;
-            margin-bottom: .5em;
+            letter-spacing: .6px;
+            line-height: 1.14;
+            font-weight: bold;
+            margin-bottom: 17px;
             text-transform: uppercase;
+        }
+
+        .social-list {
+            .item {
+                margin-right: 17px;
+            }
         }
     }
 

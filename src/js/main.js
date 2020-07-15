@@ -20,7 +20,7 @@ $(function () {
         lowHeadHeigh = lowHead.innerHeight();
         upperHeadHeigh = upperHead.innerHeight();
         menuWidth = menu.innerWidth();//
-        leftOffset = outLContainer.offset().left;//for verical slider
+        // leftOffset = outLContainer.offset().left;//for verical slider
         menuWidth = menu.innerWidth();
 
 
@@ -97,19 +97,20 @@ $(function () {
         /// menu = $('#menu');
 
         calcDimetions();
+        $('body').css('padding-top', headerHeigh);
         menu.css("left", -menuWidth);
 
-        let contPadding = +($('.container').css('padding-left').slice(0, -2));
-        let contMargin = ($('.container').offset().left);
+        // let contPadding = +($('.container').css('padding-left').slice(0, -2));
+        // let contMargin = ($('.container').offset().left);
 
         if (window.innerWidth < 768) {
             initMenu();
             setTopValue();
             animateMinue();
-            outLContainer.css('margin-left', 0);
+            // outLContainer.css('margin-left', 0);//test
 
         } else {
-            outLContainer.css('margin-left', - (contMargin + contPadding));
+            // outLContainer.css('margin-left', - (contMargin + contPadding));//test
 
         }
 
@@ -123,13 +124,15 @@ $(function () {
         colorSlider.slick({
             vertical: true,
             infinite: true,
+
             slidesToShow: 5,
             slidesToScroll: 1,
-
+            //variableHeight: true,
             // centerMode: false,
             prevArrow: ".colors-types .prev-arrow",
             nextArrow: ".colors-types .next-arrow",
             responsive: [
+
                 {
                     breakpoint: 768,
                     settings: {
@@ -141,15 +144,7 @@ $(function () {
                         slidesToScroll: 1
                     }
                 }
-                // {
-                //   breakpoint: 480,
-                //   settings: {
-                //     arrows: false,
-                //     centerMode: true,
-                //     centerPadding: '40px',
-                //     slidesToShow: 1
-                //   }
-                // }
+
             ]
 
 
@@ -173,16 +168,23 @@ $(function () {
 
     function initRelatedSlick(slickRelated) {
         slickRelated.slick({
-            slidesToShow: 3,
+            slidesToShow: 3.5,
             slidesToScroll: 1,
-            centerMode: true,
+            //centerMode: true,
             arrows: false,
             dots: false,
             cssEase: true,
+            infinite: false,
             //focusOnSelect: true,
-            centerPadding: '45px',
+            //  centerPadding: '0 20% 0 0',
             // autoplay: true,
             responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2.5,
+                    }
+                },
                 {
                     breakpoint: 768,
                     settings: {
@@ -194,15 +196,7 @@ $(function () {
                         slidesToScroll: 1
                     }
                 }
-                // {
-                //   breakpoint: 480,
-                //   settings: {
-                //     arrows: false,
-                //     centerMode: true,
-                //     centerPadding: '40px',
-                //     slidesToShow: 1
-                //   }
-                // }
+
             ]
 
 
@@ -216,6 +210,17 @@ $(function () {
     productSelect.text(homeProducts.attr('data-path'));
 
     /////////////**view********** */
+    let minusIcon = $(".icon-minus");
+    let plusIcon = $(".icon-plus");
+    let numberQ = $(".quantity .number");
+
+    function setQuantity(isInc) {
+        let prevQ = +numberQ.text();
+        isInc ? (numberQ.text(++prevQ)) : (prevQ ? numberQ.text(--prevQ) : null);
+
+
+
+    }
     function setProdType(lipsobj) {
         let colors = lipsobj[0].colors,
             img = lipsobj[1].selectedimg,
@@ -228,7 +233,8 @@ $(function () {
             let style = `background-color:${backgroundColor}`
             // colorSlider
 
-            let sliderItem = `<div class='slider-item' data-name=${name} data-deg=${deg} id=${name} style=${style}>
+            let sliderItem = `<div id=${name}>
+            <div class='slider-item' data-name=${name} data-deg=${deg}  style=${style}>
                              <span class="name">${name}</span>
                              <div class='selected-container'>
                              <img src="imgs/selected.jpg"
@@ -237,13 +243,15 @@ $(function () {
                              class="Selected">
                               </div>
                              <span class="deg">${deg}</span>
-                            </div>`;
+                            </div>
+            </div>`;
 
             colorSlider.append(sliderItem);
 
         })
         //this selected
-        let sliderImg = `<div class='slider-item latte-img' data-name=${name} data-deg=${deg} >
+        let sliderImg = `<div>
+        <div class='slider-item latte-img' data-name=${name} data-deg=${deg} >
                                 <img src=${src}
                                 alt=${name}
                                 srcset=${srcset}/>
@@ -258,14 +266,21 @@ $(function () {
                                      </div>
                                     <span class="deg">${deg}</span>
                                 </div>
-
-                         </div>`;
+                         </div>
+        </div>`;
         colorSlider.find('#Truffle').after(sliderImg);
         initColorsSlick();
         ///add class selected
         let colorsItem = $('.colors-types .slider-item');
         colorsItem.on('click', function () {
-            $(this).toggleClass('select');
+
+            if ($(this).hasClass('select')) {
+                $(this).removeClass('select')
+            } else {
+                colorsItem.removeClass('select');
+                $(this).addClass('select');
+
+            }
         })
         //  console.log(colorsItem);
 
@@ -296,16 +311,13 @@ $(function () {
             let sliderItem = `<div class="card-wrapper">
              
               <div class="card text-center"">
-            <div class='img-container card-img-top'> 
-              <img class="img" src=${src}  srcset=${srcset} alt=${name}>
-            </div>
-           
+            <div class='img-container card-img-top'><img class="img" src=${src}  srcset=${srcset} alt=${name}></div>
             <div class="card-body">
               <h5 class="card-title name">${name}</h5>
               
             </div>
             <div class="card-footer">
-            <h6 class="card-subtitle mb-2 text-muted type">${type}</h6>
+            <h6 class="card-subtitle type">${type}</h6>
               <p class="desc">${mark}</p>
             </div>
             <div class='cart icon'><img src='imgs/cart(2).svg' alt='cart'></div>
@@ -346,6 +358,8 @@ $(function () {
 
 
     checkWindow();
+    minusIcon.on('click', () => setQuantity(false));
+    plusIcon.on('click', () => setQuantity(true));
     $(window).on('resize', function () {
         checkWindow();
         setTopValue();
@@ -356,18 +370,14 @@ $(function () {
         }
 
         if ($(this).scrollTop() > 150) {
-            if (header.not('.sticky')) {
-                header.addClass('sticky')
-                upperHead.addClass('d-none');
-                setTopValue();
 
-            }
+            upperHead.addClass('d-none');
+            setTopValue();
+
         } else {
-            if (header.hasClass('sticky')) {
-                header.removeClass('sticky');
-                upperHead.removeClass('d-none');
-                setTopValue();
-            }
+            upperHead.removeClass('d-none');
+            setTopValue();
+
 
         }
 

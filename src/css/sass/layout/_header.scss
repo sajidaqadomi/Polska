@@ -1,25 +1,17 @@
 header {
     z-index: 999;
-
-    &.sticky {
-        //background-color: $mainBColor !important;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        left: 0;
-    }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
 
     .header-content {
-        background-color: $mainBColor !important;
+        background-color: $mainBColor;
         box-shadow: inset 0 -2px 0 0 #d6ac76;
-        // position: relative;
         padding: 18px 0;
 
         @media #{ $minMed } {
-
-            //height: 168px;
-            padding: 32px 0 28px 0;
-            // padding: 25px 0;
+            padding: 32px 0 8px 0;
         }
 
         .upper-header {
@@ -28,26 +20,30 @@ header {
             }
 
             .icons-list {
-                display: flex !important;
+                display: flex;
                 justify-content: space-around;
-
-                @media #{ $minMed } {
-                    justify-content: space-between;
-                }
 
                 .icons-item {
                     text-align: center;
                     color: $mainFColor;
-                    cursor: pointer;
+                    // cursor: pointer;
                     position: relative;
                     transition: all .3s ease-in-out;
 
+                    .icon-link {
+                        display: block;
+
+                        img {
+                            margin-bottom: 4px;
+                        }
+                    }
+
                     &:not(.cart) {
                         &:hover {
-                            color: $subFColor !important;
+                            color: $subFColor;
 
                             .icon {
-                                color: $subFColor !important;
+                                color: $subFColor;
                             }
 
                         }
@@ -65,8 +61,6 @@ header {
                             top: -40%;
                             left: 50%;
                             transform: translateX(-50%);
-                            width: 8px;
-                            height: 20px;
                             font-size: 13px;
                             font-weight: 600;
                             line-height: 1.54;
@@ -83,9 +77,9 @@ header {
 
                 }
 
-                &:last-of-type {
-                    text-align: right;
-                }
+                // &:last-of-type {
+                //    // text-align: right;
+                // }
             }
 
 
@@ -94,41 +88,46 @@ header {
 
         .lower-header {
             .navbar {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
+                padding-left: 0;
+                padding-right: 0;
 
                 .nav-item {
-                    border: 2px solid rgba($mainBColor, .8);
-
                     &:first-of-type {
-                        padding-left: 0 !important;
+                        padding-left: 0;
                     }
 
                     .nav-link {
-                        color: $mainFColor !important;
-                        font-size: 8px;
+                        color: $mainFColor;
+                        line-height: 1.25;
+                        letter-spacing: 1.4px;
+                        padding: 16px 8px;
 
-                        font-weight: 600;
-                        line-height: 1.23;
-                        letter-spacing: 1.2px;
-                        transition: all .3s ease-in-out;
-                        display: block;
-                        padding: 15px 8px;
-
-                        @media #{$minLarge} {
-                            font-size: 13px;
-
+                        @media #{$minMed} {
+                            font-size: 11px;
+                            padding: 16px 6px;
+                            letter-spacing: 1.2px;
+                            // font-weight: 500px;
 
                         }
 
+                        @media #{$minLarge} {
+                            letter-spacing: 1px;
+                        }
+
+                        @media #{$minXLarge} {
+                            letter-spacing: 1.4px;
+                            padding: 16px 8px;
+                            font-weight: 600;
+                        }
+
                         &:hover {
-                            background-color: rgba($subFColor, 1) !important
+                            color: rgba($subFColor, 1);
                         }
                     }
 
                     &.active {
                         .nav-link {
-                            background-color: rgba($subFColor, 1) !important;
+                            color: rgba($subFColor, 1);
                         }
                     }
                 }
