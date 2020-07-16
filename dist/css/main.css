@@ -204,12 +204,13 @@ header {
             letter-spacing: 1.2px; } }
         @media (min-width: 1024px) {
           header .header-content .lower-header .navbar .nav-item .nav-link {
-            letter-spacing: 1px; } }
+            letter-spacing: 1.2px; } }
         @media (min-width: 1200px) {
           header .header-content .lower-header .navbar .nav-item .nav-link {
             letter-spacing: 1.4px;
-            padding: 16px 8px;
-            font-weight: 600; } }
+            padding: 16px 6px;
+            font-weight: 600;
+            font-size: 13px; } }
         header .header-content .lower-header .navbar .nav-item .nav-link:hover {
           color: #edb15d; }
       header .header-content .lower-header .navbar .nav-item.active .nav-link {
