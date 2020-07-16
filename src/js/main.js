@@ -124,7 +124,6 @@ $(function () {
         colorSlider.slick({
             vertical: true,
             infinite: true,
-
             slidesToShow: 5,
             slidesToScroll: 1,
             //variableHeight: true,
@@ -192,7 +191,7 @@ $(function () {
                         arrows: false,
                         //  centerMode: true,
                         // centerPadding: '40px',
-                        slidesToShow: 1,
+                        slidesToShow: 1.5,
                         slidesToScroll: 1
                     }
                 }

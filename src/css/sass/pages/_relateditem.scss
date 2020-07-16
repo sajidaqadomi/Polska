@@ -25,9 +25,11 @@
             height: 468px;
             padding-left: 1em;
             padding-right: 1em;
+            border-radius: 0px;
             border: 1px solid rgba($subGColor, 1);
             /* border-radius: .25rem;*/
             transition: all .5s ease-in-out;
+
 
             .cart {
                 position: absolute;

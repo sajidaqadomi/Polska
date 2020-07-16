@@ -53,29 +53,36 @@ input {
     border: none;
     outline: none; }
 
+.container.out-container.right {
+  padding-right: 0;
+  padding-left: 0;
+  max-width: 100vw;
+  margin-right: 0; }
+
 @media (min-width: 768px) {
-  .container.out-container {
+  .container.out-container.left {
+    padding-left: 0;
+    margin-left: 0;
     max-width: calc(((100vw - 720px) / 2) + 720px); }
-    .container.out-container.left {
-      padding-left: 0;
-      margin-left: 0; }
-    .container.out-container.right {
-      padding-right: 0;
-      margin-right: 0; }
+  .container.out-container.right {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100vw;
+    margin-right: 0; }
     .container.out-container.right .slick-space {
-      width: calc((((100vw - 720px)/2 + 720px) / 3) - ((100vw - 720px) * .5) - 15px); } }
+      width: calc((((100vw - 720px)/2 + 720px - 15px) / 3)); } }
 
 @media (min-width: 992px) {
-  .container.out-container {
+  .container.out-container.left {
     max-width: calc(((100vw - 960px) / 2) + 960px); }
-    .container.out-container.right .slick-space {
-      width: calc((((100vw - 960px)/2 + 960px) / 3) - ((100vw - 960px) * .5) - 15px); } }
+  .container.out-container.right .slick-space {
+    width: calc(((((100vw - 960px) / 2) + 960px - 15px) / 3)); } }
 
 @media (min-width: 1200px) {
-  .container.out-container {
+  .container.out-container.left {
     max-width: calc(((100vw - 1140px) / 2) + 1140px); }
-    .container.out-container.right .slick-space {
-      width: calc((((100vw - 1140px)/2 + 1140px) / 3) - ((100vw - 1140px) * .5) - 15px); } }
+  .container.out-container.right .slick-space {
+    width: calc(((((100vw - 1140px) / 2) + 1140px - 15px) / 3)); } }
 
 html body {
   font-family: Eina03; }
@@ -255,7 +262,8 @@ header {
         width: 100%; }
   .search-form.mobile input {
     background-color: #f5f6fa;
-    border-bottom: 2px solid gray; }
+    border-bottom: 2px solid gray;
+    padding: 15px; }
     .search-form.mobile input:focus {
       border: none;
       border-bottom: 2px solid #edb15d; }
@@ -524,6 +532,7 @@ header {
   height: 468px;
   padding-left: 1em;
   padding-right: 1em;
+  border-radius: 0px;
   border: 1px solid #cecece;
   /* border-radius: .25rem;*/
   -webkit-transition: all .5s ease-in-out;

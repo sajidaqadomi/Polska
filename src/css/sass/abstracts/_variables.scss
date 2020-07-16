@@ -8,9 +8,10 @@ $spaceXl:calc((100vw - 1140px) / 2);
 $MWContainerMed:calc(((100vw - 720px) / 2) + 720px);
 $MWContainerlg:calc(((100vw - 960px) / 2) + 960px);
 $MWContainerxl:calc(((100vw - 1140px) / 2) + 1140px);
-$offsetLMed:calc((((100vw - 720px)/2 + 720px) / 3) - ((100vw - 720px) * .5) - 15px);
-$offsetLLg:calc((((100vw - 960px)/2 + 960px) / 3) - ((100vw - 960px) * .5) - 15px);
-$offsetLXl:calc((((100vw - 1140px)/2 + 1140px) / 3) - ((100vw - 1140px) * .5) - 15px); //-15PX PADDING
+$offsetLMed:calc((((100vw - 720px)/2 + 720px - 15px) / 3));
+$offsetLLg:calc(((((100vw - 960px) / 2) + 960px - 15px) / 3));
+$offsetLXl:calc(((((100vw - 1140px) / 2) + 1140px - 15px) / 3));
+
 $htmlFSize:16px;
 $bodyFSize:1rem;
 $h1FSize:2em;
