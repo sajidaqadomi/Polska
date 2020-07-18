@@ -239,7 +239,7 @@ $(function () {
                              <img src="imgs/selected.jpg"
                              srcset="imgs/selected@2x.jpg 2x,
                                      imgs/selected@3x.jpg 3x"
-                             class="Selected">
+                             class="Selected" alt="selected">
                               </div>
                              <span class="deg">${deg}</span>
                             </div>
@@ -259,9 +259,7 @@ $(function () {
                                     <span class="name">${name}</span>
                                     <div class='selected-container'>
                                     <img src="imgs/selected.jpg"
-                                    srcset="imgs/selected@2x.jpg 2x,
-                                            imgs/selected@3x.jpg 3x"
-                                    class="Selected">
+                                    class="Selected" alt="selected">
                                      </div>
                                     <span class="deg">${deg}</span>
                                 </div>
@@ -294,7 +292,8 @@ $(function () {
             let { src, srcset } = item;
             let sliderItem = `<div class='slider-item'>
             <img src=${src}
-            srcset=${srcset}
+            alt=${src}
+           
            />
            </div>`;
             slickLips.append(sliderItem);
@@ -310,9 +309,9 @@ $(function () {
             let sliderItem = `<div class="card-wrapper">
              
               <div class="card text-center"">
-            <div class='img-container card-img-top'><img class="img" src=${src}  srcset=${srcset} alt=${name}></div>
+            <div class='img-container card-img-top'><img class="img" src=${src}  alt=${name}></div>
             <div class="card-body">
-              <h5 class="card-title name">${name}</h5>
+              <a href="#" class="card-title name link">${name}</a>
               
             </div>
             <div class="card-footer">

@@ -1,9 +1,12 @@
 .related-item {
     .view-link {
         font-size: 14px;
-        // line-height: 1.14;
+        line-height: 1.14;
         color: black;
         margin-bottom: .9em;
+        font-weight: bold;
+        letter-spacing: 1px;
+
 
         &:hover {
             color: rgba($subFColor, 1);
@@ -11,23 +14,45 @@
     }
 
     .slick-slider {
-        .slick-slide {
-            margin-right: 15px; //large
+        .slick-track {
+            display: flex;
 
-            &:focus {
-                outline: none;
+            .card-wrapper {
+                height: inherit;
+                margin: 0 15px 0 15px;
+
+                //large
+                @media #{$minMed} {
+                    margin: 0 15px 0 0;
+
+
+                }
+
+                &:focus {
+                    outline: none;
+                }
             }
 
         }
 
 
+        .slick-slide {
+            // height: 100%;
+
+
+        }
+
+
+
         .card {
-            height: 468px;
+            // min-height: 468px;
+            height: 100%;
             padding-left: 1em;
             padding-right: 1em;
             border-radius: 0px;
             border: 1px solid rgba($subGColor, 1);
             /* border-radius: .25rem;*/
+
             transition: all .5s ease-in-out;
 
 
@@ -71,16 +96,22 @@
             }
 
             .card-body {
-                border-bottom: 1px solid $subGColor;
+                border-bottom: 1px solid rgba($mainBColor, .1);
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
                 .card-title {
+                    color: $mainBColor;
                     font-weight: 600;
                     line-height: 1.5;
                     letter-spacing: 0.3px;
                     font-size: 1em;
+                    word-wrap: break-word;
+
+                    &:hover {
+                        color: $subFColor;
+                    }
 
 
                 }

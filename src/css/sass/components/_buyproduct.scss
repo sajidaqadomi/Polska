@@ -17,7 +17,16 @@
         }
 
         .name {
-            margin-right: 15px;
+            margin-right: 20px;
+
+            @media #{$minMed} {
+                margin-right: 15px;
+
+                // padding-top: 0;
+
+            }
+
+
         }
     }
 
@@ -47,6 +56,10 @@
             font-size: .875em;
             font-weight: 600;
             line-height: 1.71;
+
+            .text {
+                font-weight: normal;
+            }
         }
     }
 
@@ -87,7 +100,7 @@
         .btn {
 
             transition: all .3s ease-in-out;
-            color: $mainFColor;
+            color: $mainBColor;
             font-weight: bold;
             height: 64px;
             @include flexCenter; //
@@ -117,6 +130,10 @@
                 font-size: .875em;
                 line-height: 1.14;
                 letter-spacing: 1px;
+
+                img {
+                    margin-right: 12px;
+                }
 
                 &:hover {
                     border: 1px solid rgba($subFColor, 1);

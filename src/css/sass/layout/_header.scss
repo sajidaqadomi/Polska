@@ -21,7 +21,7 @@ header {
 
             .icons-list {
                 display: flex;
-                justify-content: space-around;
+                //justify-content: space-around;
 
                 .icons-item {
                     text-align: center;
@@ -77,9 +77,23 @@ header {
 
                 }
 
-                // &:last-of-type {
-                //    // text-align: right;
-                // }
+
+
+                &.right {
+                    justify-content: flex-end;
+
+                    .icons-item {
+                        margin-left: 24px;
+                    }
+                }
+
+                &.left {
+                    justify-content: flex-start;
+
+                    .icons-item {
+                        margin-right: 24px;
+                    }
+                }
             }
 
 
@@ -92,35 +106,41 @@ header {
                 padding-right: 0;
 
                 .nav-item {
+                    text-align: center;
+
                     &:first-of-type {
-                        padding-left: 0;
+                        .nav-link {
+                            padding-left: 0;
+                        }
                     }
 
                     .nav-link {
                         color: $mainFColor;
                         line-height: 1.25;
                         letter-spacing: 1.4px;
+                        font-weight: 600;
+                        font-size: 13px;
                         padding: 16px 8px;
+
 
                         @media #{$minMed} {
                             font-size: 11px;
-                            padding: 16px 6px;
-                            letter-spacing: 1.2px;
+                            // padding: 16px 6px;
+                            letter-spacing: 1.4px;
                             // font-weight: 500px;
 
                         }
 
                         @media #{$minLarge} {
-                            letter-spacing: 1.2px;
+                            // letter-spacing: 1.4px;
                             // font-size: 12px;
 
                         }
 
                         @media #{$minXLarge} {
-                            letter-spacing: 1.4px;
-                            padding: 16px 6px;
-                            font-weight: 600;
-                            font-size: 13px;
+                            // letter-spacing: 1.4px;
+                            // padding: 16px 6px;
+
                         }
 
                         &:hover {

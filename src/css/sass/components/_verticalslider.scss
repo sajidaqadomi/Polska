@@ -1,5 +1,11 @@
 .colors-types {
 
+    padding-top: 8px;
+
+    @media #{$minMed} {
+        padding-top: 0;
+
+    }
 
     .arrow {
         padding: 1em;
@@ -62,7 +68,8 @@
             &.select {
                 @media #{$minMed} {
                     width: 100%;
-                    box-shadow: 0 -12px 68px 0 rgba(96, 42, 34, 0.44);
+                    // box-shadow: 0 -12px 68px 0 rgba(96, 42, 34, 0.44);
+                    box-shadow: 10px 9px 27px 1px rgba(0, 0, 0, 0.28);
 
                 }
 

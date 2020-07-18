@@ -8,9 +8,9 @@ $spaceXl:calc((100vw - 1140px) / 2);
 $MWContainerMed:calc(((100vw - 720px) / 2) + 720px);
 $MWContainerlg:calc(((100vw - 960px) / 2) + 960px);
 $MWContainerxl:calc(((100vw - 1140px) / 2) + 1140px);
-$offsetLMed:calc((((100vw - 720px)/2 + 720px - 15px) / 3));
-$offsetLLg:calc(((((100vw - 960px) / 2) + 960px - 15px) / 3));
-$offsetLXl:calc(((((100vw - 1140px) / 2) + 1140px - 15px) / 3));
+$offsetLMed:calc((((100vw - 720px)/2 + 720px - 15px) / 4));
+$offsetLLg:calc(((((100vw - 960px) / 2) + 960px - 15px) / 4));
+$offsetLXl:calc(((((100vw - 1140px) / 2) + 1140px - 15px) / 4));
 
 $htmlFSize:16px;
 $bodyFSize:1rem;

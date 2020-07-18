@@ -1,29 +1,42 @@
 #menu {
     position: fixed;
-    width: 100% !important;
+    width: 100%; //impor
     z-index: 10000;
 
     .multilevelpushmenu_wrapper {
 
         .levelHolderClass {
-            background-color: rgba($subFColor, 1) !important;
-            width: 100% !important;
+            background-color: rgba($subFColor, 1); //impor
+            width: 100%;
 
 
             li {
-                border-top: 1px solid rgba($mainBColor, .6) !important;
+                border-top: 1px solid rgba($mainBColor, .6); //impor
+
                 transition: all .3s ease-in-out;
 
                 a {
-                    color: $mainFColor !important;
+                    color: $mainFColor; //impor
+                    // padding-top: 12px;
+                    // padding-bottom: 12px;
+                    padding: 12px 15px;
+                    display: flex;
+                    font-weight: 700;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .icon {
+                        font-size: 20px;
+                    }
+
                 }
 
                 &:last-child {
-                    border-bottom: 1px solid rgba($mainBColor, .6) !important;
+                    border-bottom: 1px solid rgba($mainBColor, .6); //impot
                 }
 
                 &:hover {
-                    background-color: rgba($subFColor, .9) !important;
+                    background-color: rgba($subFColor, .9); //impor
                 }
             }
         }
